@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/shop.css"/>
+
+</head>
+<body>
+<div class="shopguide">
+    <nav class="navbar navbar-inverse white">
+        <div class="container-fluid container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand font_32" href="javascript:void(0)">e饿了么</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse font_16" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">我的订单</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">3****a <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span>我的地址</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="guide-info col-md-6">
+                <img src="img/shop_head.png">
+                <div class="shopguide-info-wrapper">
+                    <h1 title="至尊牛排套餐饭(南华店)" itemprop="name" class="ng-binding">至尊牛排套餐饭(南华店)</h1>
+                </div>
+            </div>
+            <div class="shopguide-server col-md-6">
+                <span class="">
+                    <em>起送价</em>
+                    <em class="shopguide-server-value ng-binding">8元</em>
+                </span>
+                <span class="">
+                    <em>配送费</em>
+                    <em class="shopguide-server-value ng-binding">免配送费</em>
+                    <!-- ngIf: shop.delivery_mode.description -->
+                </span>
+                <span class="">
+                    <em>平均送达速度</em>
+                    <em class="shopguide-server-value ng-binding">38分钟</em>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="shopnav">
+    <div class="container">
+        <div class="shopnav-search">
+            <form class="place-search ng-pristine ng-valid" role="search">
+                <button class="place-search-btn icon-search" title="搜索商家或美食" >
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+                <!--<label for="globalsearch">搜索商家或美食</label>-->
+                <input id="globalsearch" class="place-search-input" autocomplete="" placeholder="搜索商家,美食...">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="shopmenu-main grid container" style="margin-top: 0px;">
+    <div class="">
+        <div class="shopmenu-list clearfix">
+            <h3 class="shopmenu-title">全部
+                <span class="shopmenu-des">大家喜欢吃，才叫真好吃。</span>
+            </h3>
+            <div class="shopmenu-food" shop-menu-item="" food="food" shop="shopCache">
+                <span class="col-1">
+                    <a href="javascript:">
+                        <img ng-src="//fuss10.elemecdn.com/0/19/9e9a1e273bc4d50a29414d460dea3jpeg.jpeg?imageMogr2/thumbnail/100x100/format/webp/quality/85" alt="牛排加鸡排套餐饭的图片" src="//fuss10.elemecdn.com/0/19/9e9a1e273bc4d50a29414d460dea3jpeg.jpeg?imageMogr2/thumbnail/100x100/format/webp/quality/85">
+                    </a>
+                </span>
+                <div class="col-2 shopmenu-food-main">
+                    <h3 class="shopmenu-food-name ui-ellipsis">牛排加鸡排套餐饭</h3>
+                    <p class="color-mute ui-ellipsis" tooltip="✨牛排+鸡排+配菜+鸡蛋，美味又营养，肉肉在向你招手~多重口味等你挑，每份都送饮料哦~">
+                        ✨牛排+鸡排+配菜+鸡蛋，美味又营养，肉肉在向你招手~多重口味等你挑，每份都送饮料哦~
+                    </p>
+                    <!--<p>
+                        <div class="starrating icon-star ng-isolate-scope" title="评分4.3分" rate-star="" rating="food.rating">
+                            <span class="icon-star" ng-style="{ width: (rating * 20) + '%' }" style="width: 85.2%;"></span>
+                        </div>
+                        <span class="color-mute ng-binding">(81)</span>
+                        <span class="color-mute ng-binding">月售999+份</span>
+                    </p>-->
+                </div>
+                <span class="col-3 shopmenu-food-price color-stress">￥14<small></small></span>
+                <span class="col-4">
+                    <!--<div food="food">-->
+                    <div>
+                        <button class="shop-cartbutton">加入购物车</button>
+                    </div>
+                    <!--</div>-->
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="shop-cart">
+    <div class="shop-cartbasket" id="shopbasket">
+        <div shop-groupswitcher="" cart="shopCart" class="ng-isolate-scope">
+            <div class="shop-grouphead single">
+                <a href="javascript:" class="icon-cart-add" tooltip="添加购物车">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="shop-grouphead-row">购物车
+                    <a href="javascript:">[清空]</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--<div class="shop-cartbasket-empty">
+        <div class="icon-cart"></div>
+        <p>购物车是空的，赶紧选购吧</p>
+    </div>-->
+    <div class="shop-cartfooter">
+        <span class="glyphicon glyphicon-shopping-cart icon-cart shop-carticon"></span>
+        <div class="shop-cartfooter-text extras">配送费¥0</div>
+        <button class="shop-cartfooter-checkout disabled" disabled="disabled">购物车是空的</button></div>
+</div>
+<div class="footer">
+    <div class="footer-copyright serif">
+        <h5 class="owner">所有方：上海拉扎斯信息科技有限公司</h5>
+        <p>增值电信业务许可证 :
+            <a href="http://www.shca.gov.cn/" target="_blank">沪B2-20150033</a> |
+            <a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备 09007032</a> |
+            <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120305173227823" target="_blank">上海工商行政管理</a>
+            Copyright ©2008-2018 ele.me, All Rights Reserved.互联网药品信息服务资格证书 编号：（沪）-经营性-2016-0011
+        </p>
+    </div>
+    <div class="footer-police container">
+        <a href="http://www.zx110.org/picp/?sn=310100103568" rel="nofollow" target="_blank">
+            <img alt="已通过沪公网备案，备案号 310100103568" src="//shadow.elemecdn.com/faas/desktop/media/img/picp_bg.e373b3.jpg" height="30">
+        </a>
+    </div>
+</div>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "douban",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jojoliny <370795317@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
