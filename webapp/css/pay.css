@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f7f7f7; }
+  body .pay_header {
+    width: 100%;
+    height: 30px;
+    background-color: #0089dc;
+    border-bottom: 1px solid #027ecb; }
+    body .pay_header .header_center {
+      width: 1180px;
+      height: 30px;
+      margin: 0 auto;
+      color: white;
+      line-height: 30px;
+      font-size: 12px; }
+      body .pay_header .header_center a {
+        color: white;
+        text-decoration: none; }
+      body .pay_header .header_center .info {
+        float: right;
+        position: relative;
+        width: 68px; }
+        body .pay_header .header_center .info img {
+          cursor: pointer;
+          position: absolute;
+          right: 0;
+          top: 5px; }
+  body .pay_central {
+    width: 100%;
+    height: 1051px; }
+    body .pay_central .central_top {
+      width: 100%;
+      height: 96px;
+      background-color: #0089dc; }
+      body .pay_central .central_top .top_center {
+        width: 1180px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden; }
+        body .pay_central .central_top .top_center img {
+          margin-top: 27px; }
+        body .pay_central .central_top .top_center span {
+          width: 119px;
+          font-size: 26px;
+          color: #fff;
+          margin-left: 14px;
+          margin-right: 14px;
+          margin-bottom: 5px;
+          vertical-align: text-bottom;
+          border-left: 1px solid #9cc9ee;
+          height: 35px;
+          display: inline-block;
+          text-align: right; }
+        body .pay_central .central_top .top_center div {
+          width: 438.31px;
+          height: 49px;
+          float: right; }
+          body .pay_central .central_top .top_center div img {
+            margin-top: 0; }
+    body .pay_central .central_center {
+      width: 1180px;
+      height: 955px;
+      margin: 0 auto;
+      overflow: hidden; }
+      body .pay_central .central_center .central_left {
+        margin-top: 12px;
+        width: 399.19px;
+        height: 458px;
+        float: left;
+        background-color: #fff;
+        border: 1px solid #e0e0e0; }
+        body .pay_central .central_center .central_left .left_1 {
+          width: 358.19px;
+          height: 20px;
+          padding: 20px;
+          position: relative;
+          border-bottom: 1px solid #eee; }
+          body .pay_central .central_center .central_left .left_1 h2 {
+            float: left;
+            font-size: 16px;
+            font-weight: 700;
+            color: #333; }
+          body .pay_central .central_center .central_left .left_1 a {
+            position: absolute;
+            top: 22px;
+            right: 28px;
+            text-decoration: none;
+            font-size: 12px;
+            color: #666; }
+        body .pay_central .central_center .central_left .left_2 {
+          width: 361px;
+          height: 95px;
+          border-bottom: 1px solid #eee;
+          padding: 0 18px 0 20px;
+          font-size: 12px;
+          font-weight: 700;
+          color: #999; }
+          body .pay_central .central_center .central_left .left_2 span {
+            line-height: 50px;
+            display: inline-block; }
+            body .pay_central .central_center .central_left .left_2 span:nth-of-type(1) {
+              width: 147px;
+              height: 48px;
+              text-align: left;
+              margin-left: 5px; }
+            body .pay_central .central_center .central_left .left_2 span:nth-of-type(2) {
+              width: 108px;
+              height: 48px;
+              text-align: center; }
+            body .pay_central .central_center .central_left .left_2 span:nth-of-type(3) {
+              width: 90px;
+              height: 48px;
+              text-align: center; }
+          body .pay_central .central_center .central_left .left_2 h2 {
+            padding-left: 5px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #333; }
+        body .pay_central .central_center .central_left .left_3 {
+          width: 361px;
+          height: 49px;
+          padding: 0 18px 0 20px;
+          background-color: #fcfaf8;
+          overflow: hidden; }
+          body .pay_central .central_center .central_left .left_3 div {
+            float: left; }
+            body .pay_central .central_center .central_left .left_3 div:nth-of-type(1) {
+              width: 153px;
+              height: 40px;
+              padding: 5px 0 3px 10px;
+              font-size: 12px;
+              line-height: 40px;
+              color: #666; }
+            body .pay_central .central_center .central_left .left_3 div:nth-of-type(2) {
+              width: 98px;
+              height: 38px;
+              padding: 10px 0 0 6px; }
+              body .pay_central .central_center .central_left .left_3 div:nth-of-type(2) button {
+                cursor: pointer;
+                display: inline-block;
+                background: #fff;
+                width: 24px;
+                height: 24px;
+                border: 1px solid #eee;
+                outline: 0; }
+                body .pay_central .central_center .central_left .left_3 div:nth-of-type(2) button:hover {
+                  color: blue; }
+              body .pay_central .central_center .central_left .left_3 div:nth-of-type(2) input {
+                display: inline-block;
+                width: 26px;
+                height: 24px;
+                border: 0;
+                border-top: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+                text-align: center;
+                outline: 0; }
+            body .pay_central .central_center .central_left .left_3 div:nth-of-type(3) {
+              width: 80px;
+              height: 48px;
+              padding-right: 10px;
+              text-align: right;
+              font-size: 14px;
+              color: #666;
+              line-height: 48px; }
+        body .pay_central .central_center .central_left ul {
+          width: 399.19px;
+          height: 112px; }
+          body .pay_central .central_center .central_left ul li {
+            width: 361px;
+            height: 23px;
+            padding: 18px 18px 0 20px; }
+            body .pay_central .central_center .central_left ul li span {
+              padding: 5px 0 3px 10px;
+              color: #666;
+              overflow: hidden; }
+              body .pay_central .central_center .central_left ul li span:nth-of-type(1) {
+                font-size: 12px;
+                float: left; }
+              body .pay_central .central_center .central_left ul li span:nth-of-type(2) {
+                font-size: 14px;
+                float: right;
+                padding-right: 10px; }
+            body .pay_central .central_center .central_left ul li:nth-of-type(2) {
+              height: 14px; }
+        body .pay_central .central_center .central_left .left_4 {
+          width: 343.188px;
+          height: 46px;
+          padding: 52px 28px 10px 28px;
+          overflow: hidden;
+          color: #f74342;
+          font-size: 24px;
+          text-align: right; }
+          body .pay_central .central_center .central_left .left_4 span {
+            font-size: 46px;
+            color: #f74342;
+            text-align: right;
+            float: right; }
+        body .pay_central .central_center .central_left .left_5 {
+          padding: 0 30px 22px;
+          font-size: 12px;
+          color: #666;
+          text-align: right; }
+      body .pay_central .central_center .central_right {
+        margin-top: 12px;
+        width: 715px;
+        height: 766px;
+        background-color: #fff;
+        float: right;
+        padding: 25px 20px 150px 30px;
+        border: 1px solid #e0e0e0; }
+        body .pay_central .central_center .central_right h2 {
+          width: 715px;
+          height: 24px;
+          margin-bottom: 15px;
+          font-size: 16px;
+          font-weight: 700; }
+        body .pay_central .central_center .central_right .right_1 {
+          width: 715px;
+          height: 111px;
+          margin-bottom: 40px; }
+          body .pay_central .central_center .central_right .right_1 a {
+            width: 715px;
+            height: 72px;
+            display: block;
+            line-height: 72px;
+            background: #f1f1f1;
+            text-align: center;
+            color: #666;
+            text-decoration: none; }
+        body .pay_central .central_center .central_right .right_2 {
+          width: 715px;
+          height: 109px;
+          margin-bottom: 40px; }
+          body .pay_central .central_center .central_right .right_2 h2 span {
+            margin-left: 16px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #ff9c00; }
+          body .pay_central .central_center .central_right .right_2 ul {
+            width: 350px;
+            height: 68px;
+            border: 1px solid #0089dc;
+            list-style: none; }
+            body .pay_central .central_center .central_right .right_2 ul li {
+              padding: 11px 20px;
+              border: 1px solid #eee;
+              cursor: pointer; }
+              body .pay_central .central_center .central_right .right_2 ul li p {
+                margin-bottom: 4px;
+                font-size: 14px; }
+        body .pay_central .central_center .central_right .right_3 {
+          width: 715px;
+          height: 101px;
+          margin-bottom: 40px; }
+          body .pay_central .central_center .central_right .right_3 p {
+            width: 715px;
+            height: 21px;
+            margin-bottom: 20px; }
+            body .pay_central .central_center .central_right .right_3 p span {
+              display: inline-block;
+              margin-right: 20px;
+              width: 5em;
+              font-size: 14px;
+              text-align: right; }
+              body .pay_central .central_center .central_right .right_3 p span:nth-of-type(2) {
+                color: #999; }
+            body .pay_central .central_center .central_right .right_3 p:nth-of-type(2) span:nth-of-type(2) {
+              width: 215px; }
+              body .pay_central .central_center .central_right .right_3 p:nth-of-type(2) span:nth-of-type(2) em {
+                color: #f74342; }
+        body .pay_central .central_center .central_right .right_4 {
+          width: 715px;
+          height: 223px;
+          margin-bottom: 40px; }
+          body .pay_central .central_center .central_right .right_4 div {
+            width: 715px;
+            margin-bottom: 20px; }
+            body .pay_central .central_center .central_right .right_4 div span {
+              margin-right: 20px;
+              width: 5em;
+              text-align: right;
+              font-size: 14px;
+              color: #333; }
+            body .pay_central .central_center .central_right .right_4 div a {
+              text-decoration: none;
+              color: #0089dc; }
+            body .pay_central .central_center .central_right .right_4 div:nth-of-type(1) {
+              height: 21px; }
+            body .pay_central .central_center .central_right .right_4 div:nth-of-type(2) {
+              height: 41px;
+              line-height: 41px; }
+              body .pay_central .central_center .central_right .right_4 div:nth-of-type(2) div {
+                width: 148px;
+                height: 39px;
+                display: inline-block;
+                border: 1px solid gainsboro;
+                padding: 0 0 0 5px; }
+            body .pay_central .central_center .central_right .right_4 div:nth-of-type(3) {
+              height: 31px; }
+              body .pay_central .central_center .central_right .right_4 div:nth-of-type(3) span:nth-of-type(2) {
+                width: 235px;
+                height: 31px;
+                padding: 5px 10px;
+                color: #666;
+                cursor: default;
+                border: 1px solid #e0e0e0;
+                background-color: #eee; }
+            body .pay_central .central_center .central_right .right_4 div:nth-of-type(4) {
+              height: 31px; }
+              body .pay_central .central_center .central_right .right_4 div:nth-of-type(4) input {
+                padding: 5px 10px;
+                width: 235px;
+                border: 1px solid #e0e0e0;
+                outline: 0;
+                color: #666;
+                height: 20px; }
+        body .pay_central .central_center .central_right .right_5 {
+          width: 715px;
+          height: 40px; }
+          body .pay_central .central_center .central_right .right_5 button {
+            width: 124px;
+            height: 40px;
+            padding: 12px 30px;
+            border: none;
+            font-size: 16px;
+            background-color: #f74342;
+            color: #fff;
+            cursor: pointer; }
+            body .pay_central .central_center .central_right .right_5 button:hover {
+              background-color: #E80617; }
+          body .pay_central .central_center .central_right .right_5 .code {
+            width: 157px;
+            height: 36px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            float: right;
+            position: relative; }
+            body .pay_central .central_center .central_right .right_5 .code p {
+              width: 100px;
+              font-size: 12px;
+              text-align: right;
+              color: #999;
+              cursor: default; }
+            body .pay_central .central_center .central_right .right_5 .code .smallcode {
+              width: 53px;
+              height: 37px;
+              position: absolute;
+              top: 12px;
+              right: 7px; }
+            body .pay_central .central_center .central_right .right_5 .code .bigcode {
+              position: absolute;
+              left: -1px;
+              top: 61px;
+              display: none; }
+              body .pay_central .central_center .central_right .right_5 .code .bigcode img {
+                width: 125px;
+                height: 123px;
+                border: 1px solid #ddd;
+                padding: 16px 28px;
+                border-top: none;
+                background-color: #fff; }
+  body .pay_down {
+    width: 100%;
+    height: 302px;
+    margin-top: 50px;
+    border-top: 1px solid gainsboro; }
+    body .pay_down .down_center {
+      width: 1180px;
+      height: 301px;
+      margin: 0 auto;
+      overflow: hidden; }
+      body .pay_down .down_center div {
+        margin-top: 25px;
+        float: left; }
+        body .pay_down .down_center div h3 {
+          font-size: 14px;
+          line-height: 30px;
+          font-weight: 400; }
+        body .pay_down .down_center div a {
+          display: block;
+          font-size: 12px;
+          text-decoration: none;
+          color: #999;
+          margin-top: 8px;
+          margin-bottom: 8px; }
+      body .pay_down .down_center .down_1 {
+        width: 177px;
+        height: 54px; }
+      body .pay_down .down_center .down_2 {
+        width: 177px;
+        height: 126px; }
+      body .pay_down .down_center .down_3 {
+        width: 177px;
+        height: 126px; }
+      body .pay_down .down_center .down_4 {
+        width: 271.39px;
+        height: 74px;
+        border-left: 1px solid gainsboro;
+        margin-right: 100px; }
+        body .pay_down .down_center .down_4 div {
+          margin-bottom: 15px;
+          margin-top: 0;
+          margin-left: 35.391px; }
+          body .pay_down .down_center .down_4 div:nth-of-type(1) {
+            width: 225px;
+            height: 24px; }
+            body .pay_down .down_center .down_4 div:nth-of-type(1) span {
+              display: inline-block;
+              font-size: 14px;
+              color: #666; }
+            body .pay_down .down_center .down_4 div:nth-of-type(1) a {
+              display: inline-block; }
+          body .pay_down .down_center .down_4 div:nth-of-type(2) {
+            width: 225px;
+            height: 26px; }
+            body .pay_down .down_center .down_4 div:nth-of-type(2) span {
+              display: inline-block;
+              font-size: 14px;
+              color: #666; }
+            body .pay_down .down_center .down_4 div:nth-of-type(2) a {
+              display: inline-block; }
+      body .pay_down .down_center .down_5 {
+        width: 265px;
+        height: 90px;
+        overflow: hidden; }
+        body .pay_down .down_center .down_5 a {
+          width: 0;
+          height: 0;
+          float: left;
+          margin-right: 5px; }
+          body .pay_down .down_center .down_5 a img {
+            width: 90px;
+            height: 90px; }
+        body .pay_down .down_center .down_5 div {
+          width: 175px;
+          height: 51px;
+          float: right; }
+          body .pay_down .down_center .down_5 div h3 {
+            font-size: 16px;
+            color: #333;
+            font-weight: 700;
+            line-height: 30px;
+            margin-left: 20px; }
+          body .pay_down .down_center .down_5 div p {
+            font-size: 12px;
+            color: #666;
+            margin-left: 18px; }
+      body .pay_down .down_center .down_6 {
+        width: 1180px;
+        height: 83px;
+        margin-top: 50px; }
+        body .pay_down .down_center .down_6 h2 {
+          width: 703.39px;
+          height: 18px;
+          font-size: 12px;
+          text-align: center;
+          line-height: 18px;
+          color: #555;
+          margin: 0 auto; }
+        body .pay_down .down_center .down_6 p {
+          width: 1180px;
+          height: 18px;
+          font-size: 12px;
+          margin-top: 0;
+          margin-left: 70px;
+          color: #999; }
+          body .pay_down .down_center .down_6 p a {
+            text-decoration: none;
+            color: #999;
+            display: inline-block; }
+        body .pay_down .down_center .down_6 img {
+          display: inline-block;
+          margin-left: 530px;
+          margin-top: 5px;
+          width: 86px;
+          height: 30px; }
+
+/*# sourceMappingURL=pay.css.map */

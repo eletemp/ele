@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%; }
+  html body {
+    height: 100%; }
+    html body .login_all {
+      width: 100%;
+      height: 100%; }
+      html body .login_all .login_top {
+        width: 100%;
+        height: 100%; }
+        html body .login_all .login_top .login_form {
+          width: 300px;
+          height: 100%;
+          margin: 0 auto;
+          position: relative; }
+          html body .login_all .login_top .login_form .login_logo {
+            height: 121px;
+            margin-top: 145px; }
+            html body .login_all .login_top .login_form .login_logo img {
+              width: 141px;
+              height: 56px;
+              display: inline-block;
+              margin-left: 80px; }
+            html body .login_all .login_top .login_form .login_logo .login_choose {
+              width: 100%;
+              height: 22px;
+              margin-top: 35px; }
+              html body .login_all .login_top .login_form .login_logo .login_choose a {
+                width: 58px;
+                height: 22px;
+                font-size: 14px;
+                text-decoration: none;
+                display: inline-block;
+                margin-left: 55px; }
+                html body .login_all .login_top .login_form .login_logo .login_choose a:nth-of-type(1) {
+                  color: #2395ff;
+                  border-bottom: 2px solid #2395ff; }
+                html body .login_all .login_top .login_form .login_logo .login_choose a:nth-of-type(2) {
+                  color: black; }
+          html body .login_all .login_top .login_form .login_input {
+            height: 296px; }
+            html body .login_all .login_top .login_form .login_input input {
+              height: 50px; }
+              html body .login_all .login_top .login_form .login_input input:nth-of-type(1) {
+                margin-top: 10px; }
+            html body .login_all .login_top .login_form .login_input p {
+              color: #999; }
+            html body .login_all .login_top .login_form .login_input div:nth-of-type(3) {
+              position: relative; }
+            html body .login_all .login_top .login_form .login_input a {
+              text-decoration: none;
+              position: absolute;
+              right: 0;
+              bottom: 0; }
+            html body .login_all .login_top .login_form .login_input button {
+              width: 300px;
+              height: 42px;
+              background-color: #4cd96f;
+              border: none;
+              margin-top: 30px;
+              color: white;
+              font-size: 16px;
+              line-height: 42px;
+              text-align: center; }
+              html body .login_all .login_top .login_form .login_input button:hover {
+                background-color: #4cd964; }
+      html body .login_all .login_down {
+        width: 100%;
+        height: 83px;
+        position: fixed;
+        bottom: 0; }
+        html body .login_all .login_down .down_center {
+          width: 703.39px;
+          height: 83px;
+          margin: 0 auto; }
+          html body .login_all .login_down .down_center h2 {
+            width: 703.39px;
+            height: 18px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 18px;
+            color: #555;
+            margin: 0 auto; }
+          html body .login_all .login_down .down_center p {
+            width: 703.39px;
+            height: 18px;
+            font-size: 12px;
+            margin-top: 0px;
+            color: #999; }
+            html body .login_all .login_down .down_center p a {
+              text-decoration: none;
+              color: #999; }
+          html body .login_all .login_down .down_center img {
+            display: inline-block;
+            margin-left: 300px;
+            width: 86px;
+            height: 30px; }
+
+/*# sourceMappingURL=login.css.map */
