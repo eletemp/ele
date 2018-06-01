@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>店铺列表</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/home.css"/>
+</head>
+<body>
+    <div class="home">
+        <!--头部start-->
+        <header>
+            <nav class="navbar shopguide">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand logo-icon" href="#"><span>e饿了么</span></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a class="topbar-item focus" href="#">首页 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#" class="topbar-item focus">我的订单</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">4****c <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span><span>个人中心</span></a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span><span>退出登录</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+        <!--头部end-->
+        <!--主体开始-->
+        <div class="content">
+            <div class="container">
+                <div class="shopnav">
+                    <!--位置-->
+                    <div class="location">
+                        <span>当前位置：</span>
+                        <span>南华大学：</span>
+                        <span><a href="#">[切换地址]</a></span>
+                    </div>
+                    <!--搜索部分-->
+                    <div class="shopnav-search">
+                        <form class="place-search ng-pristine ng-valid" role="search">
+                            <button class="place-search-btn icon-search" title="搜索商家或美食" >
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            <!--<label for="globalsearch">搜索商家或美食</label>-->
+                            <input id="globalsearch" class="place-search-input" autocomplete="" placeholder="搜索商家,美食...">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="tab-place">
+                    <div class="right">
+                        <img class="takeout" src="./img/takeout.png">
+                    </div>
+                </div>
+                <!--分类-->
+                <div class="shoper-items">
+                    <span>商家分类:</span>
+                    <a href="#" class="item active">全部商家</a>
+                    <a href="#" class="item">美食</a>
+                    <a href="#" class="item">快餐便当</a>
+                    <a href="#" class="item">特色菜系</a>
+                    <a href="#" class="item">异国料理</a>
+                    <a href="#" class="item">小吃夜宵</a>
+                    <a href="#" class="item">甜品饮品</a>
+                    <a href="#" class="item">果蔬生鲜</a>
+                    <a href="#" class="item">商店超市</a>
+                    <a href="#" class="item">鲜花绿植</a>
+                    <a href="#" class="item">医药健康</a>
+                    <a href="#" class="item">果蔬生鲜</a>
+                    <a href="#" class="item">早餐</a>
+                    <a href="#" class="item">午餐</a>
+                    <a href="#" class="item">下午茶</a>
+                    <a href="#" class="item">晚餐</a>
+                    <a href="#" class="item">夜宵</a>
+                </div>
+                <!--列表-->
+                <div class="shoper-list">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-1">
+                            <div class="rsblock">
+                                <div class="item">
+                                    <div class="left">
+                                        <img src="./img/shopperlist-1.png"/>
+                                        <span>39分钟</span>
+                                    </div>
+                                    <div class="right">
+                                        <div class="rsblock-title">
+                                            <h4>新概念校园餐厅（南华店）</h4>
+                                        </div>
+                                        <div class="rsblock-cost">免费配送</div>
+                                        <div class="rsblock-activity"><i>保</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-1">
+                            <div class="rsblock">
+                                <div class="item">
+                                    <div class="left">
+                                        <img src="./img/shopperlist-1.png"/>
+                                        <span>39分钟</span>
+                                    </div>
+                                    <div class="right">
+                                        <div class="rsblock-title">
+                                            <h4>新概念校园餐厅（南华店）</h4>
+                                        </div>
+                                        <div class="rsblock-cost">免费配送</div>
+                                        <div class="rsblock-activity"><i>保</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-1">
+                            <div class="rsblock">
+                                <div class="item">
+                                    <div class="left">
+                                        <img src="./img/shopperlist-1.png"/>
+                                        <span>39分钟</span>
+                                    </div>
+                                    <div class="right">
+                                        <div class="rsblock-title">
+                                            <h4>新概念校园餐厅（南华店）</h4>
+                                        </div>
+                                        <div class="rsblock-cost">免费配送</div>
+                                        <div class="rsblock-activity"><i>保</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-1">
+                            <div class="rsblock">
+                                <div class="item">
+                                    <div class="left">
+                                        <img src="./img/shopperlist-1.png"/>
+                                        <span>39分钟</span>
+                                    </div>
+                                    <div class="right">
+                                        <div class="rsblock-title">
+                                            <h4>新概念校园餐厅（南华店）</h4>
+                                        </div>
+                                        <div class="rsblock-cost">免费配送</div>
+                                        <div class="rsblock-activity"><i>保</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="slider-tabs">
+                        <a class="cartbtn">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            购物车
+                        </a>
+                    </div>
+                    <div class="slider-content"></div>
+                </div>
+            </div>
+        </div>
+        <!--主体结束-->
+        <!--底部开始-->
+        <div class="footer">
+            <div class="footer-copyright serif">
+                <h5 class="owner">所有方：上海拉扎斯信息科技有限公司</h5>
+                <p>增值电信业务许可证 :
+                    <a href="http://www.shca.gov.cn/" target="_blank">沪B2-20150033</a> |
+                    <a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备 09007032</a> |
+                    <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120305173227823" target="_blank">上海工商行政管理</a>
+                    Copyright ©2008-2018 ele.me, All Rights Reserved.互联网药品信息服务资格证书 编号：（沪）-经营性-2016-0011
+                </p>
+            </div>
+            <div class="footer-police container">
+                <a href="http://www.zx110.org/picp/?sn=310100103568" rel="nofollow" target="_blank">
+                    <img alt="已通过沪公网备案，备案号 310100103568" src="//shadow.elemecdn.com/faas/desktop/media/img/picp_bg.e373b3.jpg" height="30">
+                </a>
+            </div>
+        </div>
+        <!--底部结束-->
+    </div>
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
