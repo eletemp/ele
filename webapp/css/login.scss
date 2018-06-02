@@ -17,6 +17,11 @@ html{
           height: 100%;
           margin: 0 auto;
           position: relative;
+          .log_msg{
+            position:absolute;
+            top: -80px;
+            color: #bb2626  ;
+          }
           .login_logo{
             height: 121px;
             margin-top: 145px;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="login_all">
+        <div class="login_top">
+
+            <div class="login_form">
+                <h1 class="log_msg"></h1>
+                <div class="login_logo">
+                    <img src="img/loginlogo.jpg" alt="">
+                    <div class="login_choose">
+                        <a href="javascript:void(0)">登录</a>
+                        <a href="javascript:void(0)">注册</a>
+                    </div>
+                </div>
+
+                <div class="login_input">
+                    <form action="" onsubmit="return false" id="log_form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="用户名" name="username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码" name="password">
+                        </div>
+                        <div class="form-group">
+                            <p>温馨提示：未注册饿了么帐号的手机号，登录时将自动注册，且代表您已同意</p>
+                            <a href="javascript:void(0)">《用户服务协议》</a>
+                        </div>
+                        <button type="submit" class="login_button" id="btn_login">登录</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="login_down">
+            <div class="down_center">
+                <h2>所有方：上海拉扎斯信息科技有限公司</h2>
+                <p>增值电信业务许可证 :
+                    <a href="javascript:void(0)">沪B2-20150033</a><span>|</span>
+                    <a href="javascript:void(0)">沪ICP备 09007032</a><span>|</span>
+                    <a href="javascript:void(0)">上海工商行政管理</a>
+                    Copyright ©2008-2017 ele.me, All Rights Reserved.
+                </p>
+                <a href="javascript:void(0)">
+                    <img src="img/down.jpg" alt="已通过沪公网备案，备案号 310100103568">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</html>
