@@ -6,12 +6,16 @@
     "jojoliny <370795317@qq.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/eletemp/ele",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "webapp/bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }
