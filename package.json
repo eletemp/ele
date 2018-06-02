@@ -17,6 +17,8 @@
   "homepage": "https://github.com/eletemp/ele#readme",
   "description": "",
   "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
     "mysql": "^2.15.0"
   }
 }

@@ -15,5 +15,5 @@ function getConnection() {
     return  connection;
 }
 //将方法暴露出去
-module.exports{getConnection};
+module.exports={getConnection};
 

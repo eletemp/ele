@@ -95,74 +95,26 @@
                 <!--列表-->
                 <div class="shoper-list">
                     <div class="row">
+                        <%for(var i=0;i<arr.length;i++){%>
                         <div class="col-md-3 col-sm-1">
                             <div class="rsblock">
                                 <div class="item">
                                     <div class="left">
-                                        <img src="./img/shopperlist-1.png"/>
-                                        <span>39分钟</span>
+                                        <img src="<%=arr[i].shop_img%>"/>
+                                        <!--<span>39分钟</span>-->
                                     </div>
                                     <div class="right">
                                         <div class="rsblock-title">
-                                            <h4>新概念校园餐厅（南华店）</h4>
+                                            <h4><%=arr[i].shop_name%></h4>
                                         </div>
-                                        <div class="rsblock-cost">免费配送</div>
+                                        <div class="rsblock-cost"><%=arr[i].deliver_cost%>元起送</div>
+                                        <div class="rsblock-cost">配送费：<%=arr[i].start_cost%></div>
                                         <div class="rsblock-activity"><i>保</i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-1">
-                            <div class="rsblock">
-                                <div class="item">
-                                    <div class="left">
-                                        <img src="./img/shopperlist-1.png"/>
-                                        <span>39分钟</span>
-                                    </div>
-                                    <div class="right">
-                                        <div class="rsblock-title">
-                                            <h4>新概念校园餐厅（南华店）</h4>
-                                        </div>
-                                        <div class="rsblock-cost">免费配送</div>
-                                        <div class="rsblock-activity"><i>保</i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-1">
-                            <div class="rsblock">
-                                <div class="item">
-                                    <div class="left">
-                                        <img src="./img/shopperlist-1.png"/>
-                                        <span>39分钟</span>
-                                    </div>
-                                    <div class="right">
-                                        <div class="rsblock-title">
-                                            <h4>新概念校园餐厅（南华店）</h4>
-                                        </div>
-                                        <div class="rsblock-cost">免费配送</div>
-                                        <div class="rsblock-activity"><i>保</i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-1">
-                            <div class="rsblock">
-                                <div class="item">
-                                    <div class="left">
-                                        <img src="./img/shopperlist-1.png"/>
-                                        <span>39分钟</span>
-                                    </div>
-                                    <div class="right">
-                                        <div class="rsblock-title">
-                                            <h4>新概念校园餐厅（南华店）</h4>
-                                        </div>
-                                        <div class="rsblock-cost">免费配送</div>
-                                        <div class="rsblock-activity"><i>保</i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <%}%>
                     </div>
                 </div>
                 <div class="slider">
