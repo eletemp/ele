@@ -96,24 +96,26 @@
                 <div class="shoper-list">
                     <div class="row">
                         <%for(var i=0;i<arr.length;i++){%>
-                        <div class="col-md-3 col-sm-1">
-                            <div class="rsblock">
-                                <div class="item">
-                                    <div class="left">
-                                        <img src="<%=arr[i].shop_img%>"/>
-                                        <!--<span>39分钟</span>-->
-                                    </div>
-                                    <div class="right">
-                                        <div class="rsblock-title">
-                                            <h4><%=arr[i].shop_name%></h4>
+                            <a href="/shop?id=<%=arr[i].id%>">
+                                <div class="col-md-3 col-sm-1">
+                                    <div class="rsblock">
+                                        <div class="item">
+                                            <div class="left">
+                                                <img src="<%=arr[i].shop_img%>"/>
+                                                <!--<span>39分钟</span>-->
+                                            </div>
+                                            <div class="right">
+                                                <div class="rsblock-title">
+                                                    <h4><%=arr[i].shop_name%></h4>
+                                                </div>
+                                                <div class="rsblock-cost"><%=arr[i].start_cost%>元起送</div>
+                                                <div class="rsblock-cost">配送费：<%=arr[i].deliver_cost%></div>
+                                                <div class="rsblock-activity"><i>保</i></div>
+                                            </div>
                                         </div>
-                                        <div class="rsblock-cost"><%=arr[i].start_cost%>元起送</div>
-                                        <div class="rsblock-cost">配送费：<%=arr[i].deliver_cost%></div>
-                                        <div class="rsblock-activity"><i>保</i></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </a>
                         <%}%>
                     </div>
                 </div>
@@ -150,6 +152,7 @@
     </div>
     <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/home.js"></script>
 </body>
 </html>

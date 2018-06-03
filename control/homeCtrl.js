@@ -17,6 +17,7 @@ function renderHome(req,res,results){
     var array=[];
     for(var i=0;i<results.length;i++){
         array.push({
+            id:results[i].id,
             shop_name:results[i].shop_name,
             start_cost:results[i].start_cost,
             deliver_cost:results[i].deliver_cost,

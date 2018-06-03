@@ -20,7 +20,7 @@ app.get("/favicon.ico",function(req,res){
 //-------路由---------
 require("./route/UserRoute")(app);
 require("./route/homeRoute")(app);
-
+require("./route/shopRoute")(app);
 //-------监听端口-------
 app.listen(9090,function(err){
     if(err) throw err;

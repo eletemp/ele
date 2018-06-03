@@ -90,6 +90,7 @@ body {
         margin-left: 5px;
         padding: 0 10px; }
       body .home .content .shoper-items .item {
+        cursor: pointer;
         white-space: nowrap;
         display: inline-block;
         margin: 5px 6px;
