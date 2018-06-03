@@ -61,8 +61,16 @@ body {
           font-size: 18px; }
   body .shopnav {
     background-color: white;
-    line-height: 57px; }
+    line-height: 57px;
+    overflow: hidden; }
+    body .shopnav .shopnav-left {
+      float: left;
+      width: 75%; }
+      body .shopnav .shopnav-left .shoptab {
+        width: 112px; }
     body .shopnav .shopnav-search {
+      float: right;
+      width: 25%;
       line-height: normal; }
       body .shopnav .shopnav-search .place-search {
         float: right;
@@ -100,14 +108,13 @@ body {
     float: left;
     margin-right: 2%;
     padding-right: 10px;
-    /*width: 48%;*/
     margin-bottom: 12px;
     font-size: 12px;
     background-color: #fff;
     border: 1px solid #eee;
     height: 102px; }
   body .shopmenu-main .shopmenu-food {
-    /*width: 48%;*/
+    width: 48%;
     margin-bottom: 12px;
     font-size: 12px;
     background-color: #fff;

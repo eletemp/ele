@@ -16,9 +16,9 @@
                     </a>
                 </h1>
                 <span class="head_right">
-                    <a href="javascript:void(0)">登录</a>
+                    <a href="login.html">登录</a>
                     <span>|</span>
-                    <a href="javascript:void(0)">注册</a>
+                    <a href="login.html">注册</a>
                     <a href="javascript:void(0)" class="open">我要开店</a>
                 </span>
             </div>
@@ -28,10 +28,27 @@
                 </h2>
                 <div class="index_search">
                     <div class="index_address">
-                        <a href="javascript:void(0)">
+                        <a id="now_address">
                             衡阳
                             <div class="angle"></div>
                         </a>
+                        <div class="choose_address" id="choose_address">
+                            <div>
+                                <h3>请选择你所在的城市</h3>
+                                <span>选城市</span>
+                                <span> > 定位置 > 叫外卖</span>
+                            </div>
+                            <div>
+                                <div>
+                                    <span>猜你在</span>
+                                    <button>衡阳</button>
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="请输入城市">
+                                </div>
+                            </div>
+                            <div id="address"></div>
+                        </div>
                     </div>
                     <div class="index_form">
                         <form action="">
@@ -80,5 +97,7 @@
             </a>
         </div>
     </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
