@@ -1,5 +1,4 @@
 "use strict";
-
 const homeDao=require("../dao/homeDao");
 function queryAllShops(req,res){
     homeDao.queryAllShops(function(results){
@@ -7,6 +6,13 @@ function queryAllShops(req,res){
         renderHome(req,res,results);
     });
 }
+//搜索商家或美食
+function globalsearch(req,res,keyword){
+    homeDao.globalsearch(keyword,function(results){
+        renderHome(req,res,results);
+    });
+}
+
 function renderHome(req,res,results){
     var array=[];
     for(var i=0;i<results.length;i++){
@@ -20,7 +26,6 @@ function renderHome(req,res,results){
     let shops={
         arr:array
     };
-    console.log(shops.arr[0]);
     res.render("home.ejs",shops);
 }
-module.exports={queryAllShops};
+module.exports={queryAllShops,globalsearch};

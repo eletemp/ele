@@ -56,12 +56,12 @@
                     </div>
                     <!--搜索部分-->
                     <div class="shopnav-search">
-                        <form class="place-search ng-pristine ng-valid" role="search">
-                            <button class="place-search-btn icon-search" title="搜索商家或美食" >
+                        <form class="place-search ng-pristine ng-valid" role="search" action="/search" method="post">
+                            <button class="place-search-btn icon-search" id="searchShops" title="搜索商家或美食" type="submit">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                             <!--<label for="globalsearch">搜索商家或美食</label>-->
-                            <input id="globalsearch" class="place-search-input" autocomplete="" placeholder="搜索商家,美食...">
+                            <input id="globalsearch" name="keyWord" class="place-search-input"  placeholder="搜索商家,美食...">
                         </form>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                                         <div class="rsblock-title">
                                             <h4><%=arr[i].shop_name%></h4>
                                         </div>
-                                        <div class="rsblock-cost"><%=arr[i].deliver_cost%>元起送</div>
-                                        <div class="rsblock-cost">配送费：<%=arr[i].start_cost%></div>
+                                        <div class="rsblock-cost"><%=arr[i].start_cost%>元起送</div>
+                                        <div class="rsblock-cost">配送费：<%=arr[i].deliver_cost%></div>
                                         <div class="rsblock-activity"><i>保</i></div>
                                     </div>
                                 </div>
@@ -150,5 +150,6 @@
     </div>
     <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/home.js"></script>
 </body>
 </html>
