@@ -15,4 +15,11 @@ function insertUser(username,password,callback) {
         callback(results);
     })
 }
-module.exports={selectUser,insertUser}
+//验证用户名
+function selectUsername(username,callback) {
+    var sql="SELECT username from user where username=?;";
+    conn.query(sql,[username],function (err,results,fields) {
+        callback(results);
+    });
+}
+module.exports={selectUser,insertUser,selectUsername}

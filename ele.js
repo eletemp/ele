@@ -8,7 +8,8 @@ app.set("view engine","ejs");
 app.set("views","webapp");
 //首页渲染
 app.get("/",function (req,res) {
-    res.render("index.ejs");
+    // res.render("index.ejs");
+    res.render("login.ejs");
 })
 app.get("/favicon.ico",function(req,res){
     return;
@@ -17,6 +18,6 @@ app.get("/favicon.ico",function(req,res){
 require("./route/UserRoute")(app);
 
 //-------监听端口-------
-app.listen(9090,function(err){
+app.listen(8088,function(err){
     if(err) throw err;
 });

@@ -16,6 +16,7 @@
     "webapp/bower_components"
   ],
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "bootstrapvalidator": "^0.5.3"
   }
 }
