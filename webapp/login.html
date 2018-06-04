@@ -19,18 +19,18 @@
                     </div>
                 </div>
                 <div class="login_input">
-                    <form action="" onsubmit="return false" id="log_form">
+                    <form action="">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="用户名" name="username">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="用户名">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码" name="password">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
                         </div>
                         <div class="form-group">
                             <p>温馨提示：未注册饿了么帐号的手机号，登录时将自动注册，且代表您已同意</p>
                             <a href="javascript:void(0)">《用户服务协议》</a>
                         </div>
-                        <button type="submit" class="login_button" id="btn_login">登录</button>
+                        <button type="submit" class="login_button">登录</button>
                     </form>
                     <form action="" onsubmit="return false" id="reg_form">
                         <div class="form-group">
@@ -67,6 +67,17 @@
             </a>
         </div>
     </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <!--<script>
+        $("#login").on("click",function(){
+            $("#login").css("color","#2395ff").css("border-bottom","2px solid #2395ff");
+            $("#register").css("color","black").css("border-bottom","2px solid transparent");
+        });
+        $("#register").on("click",function(){
+            $("#register").css("color","#2395ff").css("border-bottom","2px solid #2395ff");
+            $("#login").css("color","black").css("border-bottom","2px solid transparent");
+        });
+    </script>-->
 </body>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

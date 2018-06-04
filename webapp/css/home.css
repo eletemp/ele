@@ -13,7 +13,7 @@ body {
       color: #FFFFFF;
       font-size: 32px;
       font-weight: 400;
-      font-family: "幼圆"; }
+      font-family: "骞煎渾"; }
     body .home header .collapse.navbar-collapse .navbar-nav li {
       padding: 0 10px; }
       body .home header .collapse.navbar-collapse .navbar-nav li a {
@@ -90,6 +90,7 @@ body {
         margin-left: 5px;
         padding: 0 10px; }
       body .home .content .shoper-items .item {
+        cursor: pointer;
         white-space: nowrap;
         display: inline-block;
         margin: 5px 6px;

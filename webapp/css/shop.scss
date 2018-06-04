@@ -84,7 +84,17 @@ body{
   .shopnav{
     background-color: white;
     line-height: 57px;
+    overflow: hidden;
+    .shopnav-left{
+      float: left;
+      width: 75%;
+      .shoptab{
+        width: 112px;
+      }
+    }
     .shopnav-search {
+      float: right;
+      width:25%;
       line-height: normal;
       .place-search {
         float: right;
@@ -131,7 +141,7 @@ body{
         float: left;
         margin-right: 2%;
         padding-right: 10px;
-        width: 48%;
+        //width: 48%;
         margin-bottom: 12px;
         font-size: 12px;
         background-color: #fff;
@@ -156,7 +166,7 @@ body{
       }
       .shopmenu-food-main{
         .shopmenu-food-name {
-          margin-top: 10px;
+          margin-top: 3px;
           font-size: 14px;
           font-weight: 700;
         }
