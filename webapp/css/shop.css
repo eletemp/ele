@@ -2,6 +2,9 @@ body {
   width: 100%;
   height: 100%;
   background: #f7f7f7; }
+  body * {
+    margin: 0;
+    padding: 0; }
   body .font_32 {
     font-size: 32px;
     font-weight: 400; }
@@ -103,18 +106,10 @@ body {
     body .shopmenu-main .shopmenu-title span {
       font-size: 12px;
       color: #999; }
-  body .shopmenu-main .grid .shopmenu-food {
-    position: relative;
-    float: left;
-    margin-right: 2%;
-    padding-right: 10px;
-    margin-bottom: 12px;
-    font-size: 12px;
-    background-color: #fff;
-    border: 1px solid #eee;
-    height: 102px; }
+  body .shopmenu-main .w75 {
+    width: 75%; }
   body .shopmenu-main .shopmenu-food {
-    width: 48%;
+    width: 100%;
     margin-bottom: 12px;
     font-size: 12px;
     background-color: #fff;
@@ -157,6 +152,49 @@ body {
       border-radius: 20px;
       text-align: center;
       outline: 0; }
+  body .shopmenu-main .shop-cartctrl {
+    border: 1px solid #ddd; }
+    body .shopmenu-main .shop-cartctrl .ctrl {
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      height: 24px;
+      border: 0;
+      width: 27px;
+      text-align: center;
+      background-color: #eee;
+      line-height: 24px;
+      outline: 0; }
+    body .shopmenu-main .shop-cartctrl .ctrl.minus:active {
+      background-color: #ddd;
+      border-color: #ddd; }
+    body .shopmenu-main .shop-cartctrl .ctrl.quantity {
+      background-color: #fff;
+      width: 36px;
+      left: 27px; }
+    body .shopmenu-main .shop-cartctrl .ctrl.minus {
+      left: 0;
+      border-right: 1px solid #ddd;
+      border-radius: 20px 0 0 20px;
+      cursor: pointer; }
+    body .shopmenu-main .shop-cartctrl .ctrl.plus {
+      right: 0;
+      border-left: 1px solid #ddd;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer; }
+  body .shopmenu-main .shop-cartbutton, body .shopmenu-main .shop-cartctrl {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: 0;
+    cursor: pointer;
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 20px;
+    text-align: center;
+    outline: 0; }
   body .shop-cart {
     z-index: 102;
     position: fixed;
@@ -187,6 +225,57 @@ body {
           cursor: pointer; }
         body .shop-cart .shop-cartbasket .shop-grouphead .shop-grouphead-row {
           height: 30px; }
+    body .shop-cart .shop-cartbasket-foods {
+      background-color: white; }
+      body .shop-cart .shop-cartbasket-foods .shop-cartbasket-tablerow {
+        display: table;
+        table-layout: fixed;
+        height: 45px;
+        width: 100%;
+        padding: 0 10px;
+        margin-top: -1px; }
+        body .shop-cart .shop-cartbasket-foods .shop-cartbasket-tablerow .cell {
+          display: table-cell;
+          vertical-align: middle;
+          border-bottom: 1px solid #eee; }
+        body .shop-cart .shop-cartbasket-foods .shop-cartbasket-tablerow .cell.itemname {
+          width: 50%;
+          margin-right: 10px;
+          font-size: 14px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #666; }
+        body .shop-cart .shop-cartbasket-foods .shop-cartbasket-tablerow .cell.itemquantity {
+          width: 25%;
+          text-align: center; }
+          body .shop-cart .shop-cartbasket-foods .shop-cartbasket-tablerow .cell.itemquantity button {
+            background-color: #fff;
+            height: 20px;
+            width: 20px;
+            line-height: 16px;
+            vertical-align: top;
+            border: 1px solid #ddd;
+            outline: 0;
+            cursor: pointer;
+            color: #666;
+            float: left; }
+          body .shop-cart .shop-cartbasket-foods .shop-cartbasket-tablerow .cell.itemquantity input {
+            border: 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            height: 20px;
+            width: 30px;
+            line-height: 20px;
+            font-size: 12px;
+            vertical-align: top;
+            text-align: center;
+            outline: 0;
+            color: #666;
+            float: left; }
+        body .shop-cart .shop-cartbasket-foods .shop-cartbasket-tablerow .cell.itemtotal {
+          text-align: right;
+          color: #f17530; }
     body .shop-cart .shop-cartbasket-empty {
       color: #999;
       text-align: center; }
