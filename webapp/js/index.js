@@ -143,4 +143,57 @@ $(function(){
             srt = "none";
         }
     });
+
+    //地图
+    var map = new BMap.Map("map");
+    var point = new BMap.Point(116.331398,39.897445);
+
+    var localSearch = new BMap.LocalSearch(map);
+    function searchByStationName() {
+        map.clearOverlays();//清空原来的标注
+        var keyword = document.getElementById("search_city").value;
+        localSearch.setSearchCompleteCallback(function (searchResult) {
+            map.clearOverlays();
+            var poi = searchResult.getPoi(0);
+            //console.log(poi.point.lng + "," + poi.point.lat);
+            map.centerAndZoom(poi.point, 16);
+            var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地方对应的经纬度
+            map.addOverlay(marker);
+            map.enableScrollWheelZoom();    //启用地图滚轮放大缩小
+            map.enableKeyboard();       //启用键盘上下左右键移动地图
+            map.enableDoubleClickZoom();    //启用鼠标双击放大
+            map.addControl(new BMap.NavigationControl());
+            map.addControl(new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT}));
+            var content = document.getElementById("search_city").value;
+            var infoWindow = new BMap.InfoWindow("<p style='font-size:14px;'>" + content + "</p>");
+            marker.addEventListener("click", function () { this.openInfoWindow(infoWindow); });
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+        });
+        localSearch.search(keyword);
+    }
+    var string = $(".index_input").value;
+    $(".index_input").bind('keypress',function(event){
+        console.log(string);
+        if (string != ""){
+            if(event.keyCode == "13")
+            {
+                $(".index_top").css("height","700px");
+                $("#logo").animate({
+                    top:-470+"px",
+                    opacity:0
+                },500);
+                $(".index_search").css("left","0").animate({
+                    top:-320 + "px"
+                },500);
+                $("#map").animate({
+                    height:442+"px",
+                    top:160+"px"
+                },500);
+                setTimeout(function(){
+                    searchByStationName();
+                },600);
+            }
+        }
+        return false;
+    });
 });

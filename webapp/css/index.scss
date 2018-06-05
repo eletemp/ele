@@ -53,13 +53,13 @@ body{
         height: 192px;
         position: absolute;
         bottom: 100px;
-        img{
-          width: 280px;
-          height: 65px;
-          position: absolute;
-          top: 0;
-          left: 440px;
-        }
+          img{
+            width: 280px;
+            height: 65px;
+            position: absolute;
+            top: 0;
+            left: 440px;
+          }
         .index_search{
           width: 590px;
           height: 56px;
@@ -355,5 +355,13 @@ body{
         height: 30px;
       }
     }
+  }
+  #map{
+    width: 1180px;
+    //height: 442px;
+    position: absolute;
+    left: 340px;
+    top:700px;
+    z-index: 98;
   }
 }

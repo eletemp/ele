@@ -296,5 +296,11 @@ body {
       margin-left: 520px;
       width: 86px;
       height: 30px; }
+  body #map {
+    width: 1180px;
+    position: absolute;
+    left: 340px;
+    top: 700px;
+    z-index: 98; }
 
 /*# sourceMappingURL=index.css.map */
