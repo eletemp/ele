@@ -144,6 +144,29 @@ $(function(){
         }
     });
 
+    //检测input
+    var flag = false;
+    $("#search_city").focus(function(){
+        flag = true;
+    });
+    $("#search_city").blur(function(){
+        flag = false;
+    });
+    var interval = setInterval(function(){
+        if($("#search_city").val()!="" && flag){
+            $("#search_result").css("display","block");
+        }
+        else {
+            $("#search_result").css("display","none");
+        }
+        $("li").click(function(){
+            $("#search_city").val($(this).text());
+            $("#search_result").css("display","none");
+        });
+    },1000);
+
+
+
     //地图
     var map = new BMap.Map("map");
     var point = new BMap.Point(116.331398,39.897445);
@@ -191,9 +214,10 @@ $(function(){
                 },500);
                 setTimeout(function(){
                     searchByStationName();
-                },600);
+                },500);
             }
         }
         return false;
     });
+
 });

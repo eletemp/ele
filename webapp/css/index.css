@@ -229,6 +229,27 @@ body {
               letter-spacing: 10px; }
               body .index_top .top_center .index_logo .index_search .index_form button:hover {
                 background-color: #DD000C; }
+            body .index_top .top_center .index_logo .index_search .index_form #search_result {
+              width: 411px;
+              background-color: white;
+              border: 1px solid #eee;
+              z-index: 999;
+              display: none; }
+              body .index_top .top_center .index_logo .index_search .index_form #search_result ul {
+                list-style: none;
+                text-align: center;
+                font-size: 20px;
+                line-height: 40px;
+                margin-bottom: 0; }
+                body .index_top .top_center .index_logo .index_search .index_form #search_result ul li {
+                  width: 410px;
+                  height: 40px;
+                  margin-left: -40px;
+                  border-top: 1px solid #eee;
+                  border-bottom: 1px solid #eee;
+                  cursor: pointer; }
+                  body .index_top .top_center .index_logo .index_search .index_form #search_result ul li:hover {
+                    background-color: gainsboro; }
   body .index_down {
     width: 1180px;
     height: 404px;
@@ -244,7 +265,8 @@ body {
         border: 1px solid gainsboro;
         margin-top: 62px;
         position: relative;
-        float: left; }
+        float: left;
+        z-index: -999; }
         body .index_down .down_top .index_app img {
           margin: 18px 16px;
           width: 128px;
