@@ -434,7 +434,7 @@ body {
               display: none;
               img {
                 width: 125px;
-                height: 123px;
+                height: 117px;
                 border: 1px solid #ddd;
                 padding: 16px 28px;
                 border-top: none;
@@ -585,6 +585,114 @@ body {
           //margin: 0 auto;
           width: 86px;
           height: 30px;
+        }
+      }
+    }
+  }
+  .add_address{
+    width: 788px;
+    height: 473px;
+    //margin: 225px auto;
+    background-color: white;
+    position: absolute;
+    top:125px;
+    left: 610px;
+    display: none;
+    border: 1px solid grey;
+    .add_close{
+      display: inline-block;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+      color: #ccc;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      background-color: red;
+    }
+    .address_top{
+      width: 760px;
+      height: 27px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+    .add_info{
+      width: 760px;
+      height: 373px;
+      padding: 15px 15px 30px 15px;
+      div{
+        width: 760px;
+        height: 67px;
+        label{
+          float: left;
+          display: inline-block;
+          width: 65px;
+          height: 38px;
+          margin-right: 20px;
+          line-height: 38px;
+          text-align: right;
+          color: #666;
+          font-size: 14px;
+        }
+        input{
+          vertical-align: baseline;
+          border: 1px solid #dedede;
+          box-sizing: border-box;
+          width: 300px;
+          height: 42px;
+          line-height: 38px;
+          padding-left: 10px;
+          border-radius: 2px;
+        }
+        &:nth-of-type(2){
+          width:760px;
+          height: 63px;
+          div{
+            width: 760px;
+            height: 38px;
+            //overflow: hidden;
+            input{
+              width: 13px;
+              height: 13px;
+              margin-top: 10px;
+              float: left;
+              margin-right: 5px;
+            }
+            label{
+              float: left;
+              width: 60px;
+              height: 38px;
+              text-align: left;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      button{
+        margin-right: 10px;
+        border: 1px solid #0089dc;
+        background-color: #0089dc;
+        color: #fff;
+        width: 160px;
+        height: 42px;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size: 14px;
+        &:nth-of-type(1){
+          margin-left: 85px;
+        }
+        &:nth-of-type(2){
+          width: 68px;
+          box-sizing: border-box;
+          background: 0 0;
+          border: none;
+          padding: 0 20px;
+          color: #9f9f9f;
         }
       }
     }
