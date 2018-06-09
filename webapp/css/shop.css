@@ -34,7 +34,6 @@ body {
         width: 95px;
         height: 95px;
         border-radius: 50%;
-        border: 4px solid #FFF;
         border: 4px solid rgba(255, 255, 255, 0.3);
         vertical-align: middle; }
       body .shopguide .guide-info h1 {
@@ -152,6 +151,16 @@ body {
       border-radius: 20px;
       text-align: center;
       outline: 0; }
+    body .shopmenu-main .shopmenu-food .point {
+      width: 0;
+      height: 0;
+      display: none;
+      border: 13px solid #0089dc;
+      border-radius: 20px;
+      position: absolute;
+      left: 327.5px;
+      top: 64px;
+      z-index: 100; }
   body .shopmenu-main .shop-cartctrl {
     border: 1px solid #ddd; }
     body .shopmenu-main .shop-cartctrl .ctrl {
