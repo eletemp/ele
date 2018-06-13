@@ -104,6 +104,5 @@
         $scope.$watch("text",function(now,old){
 
         });
-
     }]);
 })(angular)
