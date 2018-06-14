@@ -8,6 +8,7 @@
         this.addItem=function (food_id,food_name,food_price) {
             if(cartItem[food_id]==undefined){
                 cartItem[food_id]={
+                    food_id:food_id,
                     food_name:food_name,
                     food_price:food_price,
                     quantity:1

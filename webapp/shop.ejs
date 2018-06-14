@@ -154,9 +154,9 @@
         <li class="shop-cartbasket-tablerow" ng-repeat="food in cartItem | notnull track by $index">
             <div class="cell itemname" ng-bind="food.food_name"></div>
             <div class="cell itemquantity">
-                <button>-</button>
+                <button ng-click="sub(food.food_id)">-</button>
                 <input class="ng-pristine ng-valid" ng-model="food.quantity"/>
-                <button>+</button></div>
+                <button ng-click="add(food.food_id)">+</button></div>
             <div class="cell itemtotal ng-binding">￥<span ng-bind="food.food_price"></span></div>
         </li>
     </ul>
