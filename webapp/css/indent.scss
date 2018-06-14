@@ -180,6 +180,13 @@ body{
               }
             }
           }
+          .indents{
+            width: 970px;
+            height: 100px;
+            border: 1px solid gainsboro;
+            margin-top: 40px;
+
+          }
         }
       }
     }
@@ -327,11 +334,15 @@ body{
     }
   }
   .add_address{
-    width: 790px;
-    height: 475px;
-    margin: 225px auto;
+    width: 788px;
+    height: 473px;
+    //margin: 225px auto;
     background-color: white;
-    position: relative;
+    position: absolute;
+    top:125px;
+    left: 610px;
+    display: none;
+    border: 1px solid grey;
     .add_close{
       display: inline-block;
       position: absolute;

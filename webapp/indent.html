@@ -24,7 +24,7 @@
             <div class="center_top">
                 <span>当前位置：</span>
                 <span><a href="">广场南路南华大学</a></span>
-                <span><a href="">[切换地址]</a></span>
+                <span><a href="index.html">[切换地址]</a></span>
                 <span>>   近一星期订单</span>
             </div>
             <div class="center_left">
@@ -34,7 +34,7 @@
                     <h2>我的资料</h2>
                     <ul>
                         <li><a href="javaScript:void(0)">个人资料</a></li>
-                        <li><a href="javaScript:void(0)">地址管理</a></li>
+                        <li><a href="javaScript:void(0)" id="address_manage">地址管理</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,6 +48,11 @@
                         <a href="javascript:void(0)">热门问题</a>
                         <a href="javascript:void(0)">随时关注订单状态</a>
                     </div>
+                    <div class="indents"></div>
+                    <div class="indents"></div>
+                    <div class="indents"></div>
+                    <div class="indents"></div>
+
                 </div>
             </div>
         </div>
@@ -105,42 +110,44 @@
             </div>
         </div>
     </div>
-    <!--<div class="add_address">-->
-        <!--<div class="add_close"></div>-->
-        <!--<div class="address_top">-->
-            <!--添加新地址-->
-        <!--</div>-->
-        <!--<div class="add_info">-->
-            <!--<form action="">-->
-                <!--<div>-->
-                    <!--<label>姓名</label>-->
-                    <!--<input type="text" placeholder="请输入您的姓名">-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>性别</label>-->
-                    <!--<div>-->
-                        <!--<input type="radio" name="sex" value="1">-->
-                        <!--<label>先生</label>-->
-                        <!--<input type="radio" name="sex" value="2"><label>女士</label>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>位置</label>-->
-                    <!--<img src="" alt="">-->
-                    <!--<input type="text" placeholder="请输入小区、大厦或学校">-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>详细地址</label>-->
-                    <!--<input type="text" placeholder="单元、门牌号">-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>手机号</label>-->
-                    <!--<input type="text" placeholder="请输入您的手机号">-->
-                <!--</div>-->
-            <!--</form>-->
-            <!--<button>保存</button>-->
-            <!--<button>取消</button>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="add_address" id="add_address">
+        <div class="add_close" id="add_close"></div>
+        <div class="address_top">
+            添加新地址
+        </div>
+        <div class="add_info">
+            <form action="">
+                <div>
+                    <label>姓名</label>
+                    <input type="text" placeholder="请输入您的姓名">
+                </div>
+                <div>
+                    <label>性别</label>
+                    <div>
+                        <input type="radio" name="sex" value="1">
+                        <label>先生</label>
+                        <input type="radio" name="sex" value="2"><label>女士</label>
+                    </div>
+                </div>
+                <div>
+                    <label>位置</label>
+                    <img src="" alt="">
+                    <input type="text" placeholder="请输入小区、大厦或学校">
+                </div>
+                <div>
+                    <label>详细地址</label>
+                    <input type="text" placeholder="单元、门牌号">
+                </div>
+                <div>
+                    <label>手机号</label>
+                    <input type="text" placeholder="请输入您的手机号">
+                </div>
+            </form>
+            <button id="save">保存</button>
+            <button id="cancel">取消</button>
+        </div>
+    </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./js/indent.js"></script>
 </body>
 </html>
