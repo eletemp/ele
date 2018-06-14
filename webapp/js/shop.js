@@ -11,11 +11,26 @@
             return items;
         }
     });
-    app.controller("shopCtrl",["$scope","cart",function ($scope,cart) {
-        $scope.cartItem=cart.getCartItem();
+    app.controller("shopCtrl",["$scope","$http","cart",function ($scope,$http,cart) {
+        // $scope.cartItem={};
+        var flag=false;
+        if(!flag){
+            $scope.cartItem=cart.getCartItem();
+            flag=true;
+        }
         $scope.addItem=cart.addItem;
         $scope.add=cart.add;
         $scope.sub=cart.sub;
+        if(flag){
+            //监听数据变化，时刻发送到后台保存
+            $scope.$watch("cartItem",function (now,old) {
+                $http.post("/storeCart",{
+                    params:now
+                }).success(function (data) {
+                    console.log("保存成功 "+data.msg);
+                });
+            },true);
+        }
     }]);
 })(angular);
 
@@ -53,26 +68,26 @@ $(function(){
             else {
                 clearInterval(interval1);
             }
-            console.log(target_top);
+            // console.log(target_top);
         },20);
-        //var interval2 = setInterval(function(){
-        //    var current_left = $(".point").offset().left;
-        //    var current_top = $(".point").offset().top;
-        //    var target_top = (car_top-current_top)/5;
-        //    if (current_left >= car_left){
-        //        clearInterval(interval2);
-        //    }
-        //    var newpoint = new Object();
-        //    newpoint.left = current_left+left_speed1;
-        //    newpoint.top = current_top+target_top;
-        //    $(".point").offset(newpoint);
-        //    //left_speed2 = left_speed2+1;
-        //    //top_speed2 = top_speed2+1;
-        //},20);
+        var interval2 = setInterval(function(){
+           var current_left = $(".point").offset().left;
+           var current_top = $(".point").offset().top;
+           var target_top = (car_top-current_top)/5;
+           if (current_left >= car_left){
+               clearInterval(interval2);
+           }
+           var newpoint = new Object();
+           newpoint.left = current_left+left_speed1;
+           newpoint.top = current_top+target_top;
+           $(".point").offset(newpoint);
+           //left_speed2 = left_speed2+1;
+           //top_speed2 = top_speed2+1;
+        },20);
 
-        //console.log("left="+left+"  "+"top="+top);
-        //console.log("car_left="+car_left+"  "+"car_top="+car_top);
-        //console.log("camid_left="+mid_left+"  "+"mid_top="+mid_top);
+        // console.log("left="+left+"  "+"top="+top);
+        // console.log("car_left="+car_left+"  "+"car_top="+car_top);
+        // console.log("camid_left="+mid_left+"  "+"mid_top="+mid_top);
     });
     //$(document).on("click",function(event){
     //    var e = event || window.event;

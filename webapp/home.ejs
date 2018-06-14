@@ -119,15 +119,51 @@
                         <%}%>
                     </div>
                 </div>
-                <div class="slider">
-                    <div class="slider-tabs">
-                        <a class="cartbtn">
-                            <i class="glyphicon glyphicon-shopping-cart"></i>
-                            购物车
-                        </a>
+                <div class="sidebar" ng-app="homeApp" ng-controller="cartCtrl">
+                    <div class="slider">
+                        <div class="slider-tabs">
+                            <a class="cartbtn">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                购物车
+                            </a>
+                        </div>
                     </div>
-                    <div class="slider-content"></div>
+                    <div class="sidebar-content">
+                        <div><div>
+                        <div class="sidebarcart-caption">
+                            <a class="" href="">购物车</a>
+                            <span class="glyphicon glyphicon-menu-right"></span>
+                        </div>
+                        <div class="sidebarcart">
+                            <dl>
+                                <dt>
+                                    <span >购物车</span>
+                                    <a href="JavaScript:" class="sidebarcart-clear">[清空]</a>
+                                </dt>
+                                <dd>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <div class="sidebarcart-name" title="(抢)牛排套餐饭">(抢)牛排套餐饭</div>
+                                            <div class="sidebarcart-quantity">
+                                                <span>-</span>
+                                                <input class="ng-pristine ng-valid" value="1">
+                                                <span>+</span></div>
+                                            <div class="sidebarcart-price">24</div>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                                <div class="sidebarcart-summary">
+                                    <p>共 <span class="color-stress">2</span> 份，总计 <span class="color-stress">24</span></p>
+                                    <!--<button class="sidebarcart-submit sidebarcart-hasagio">商家已歇业</button>-->
+                                    <button class="sidebarcart-submit">去结算</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
         <!--主体结束-->
@@ -154,5 +190,7 @@
     <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/home.js"></script>
+    <script type="text/javascript" src="./js/service/cartService.js"></script>
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
 </body>
 </html>

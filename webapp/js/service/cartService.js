@@ -1,7 +1,18 @@
 (function (angular) {
     var app=angular.module("ele.service.cart",[]);
-    app.service("cart",function () {
+    app.service("cart",["$http",function ($http) {
         var cartItem={};
+        //初始化数据
+        $.ajax({
+            type:"post",
+            url:"/getCart",
+            async:false,//同步
+            success:function(data){
+                var json=strToJson(data);
+                cartItem=json;
+            },
+            error:function(){}
+        });
         this.getCartItem=function () {
             return cartItem;
         }
@@ -25,5 +36,5 @@
                 delete cartItem[food_id];
             }
         }
-    })
+    }]);
 })(angular)
