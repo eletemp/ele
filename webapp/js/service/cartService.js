@@ -36,5 +36,28 @@
                 delete cartItem[food_id];
             }
         }
+        // 总价格   单价*数量
+        this.totalPrice=function(){
+            var tPrice=0;
+            for(var item in cartItem){
+                tPrice+=parseInt(cartItem[item].food_price)*parseInt(cartItem[item].quantity);
+            }
+            return tPrice;
+        }
+        //清空购物车
+        this.removeItems=function () {
+            for(var item in cartItem){
+                delete cartItem[item];
+            }
+            return;
+        }
+        //计算购物车商品总数量
+        this.totalItems=function () {
+            var count=0;
+            for(var item in cartItem){
+                count+=parseInt(cartItem[item].quantity);
+            }
+            return count;
+        }
     }]);
 })(angular)

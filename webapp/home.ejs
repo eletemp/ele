@@ -129,38 +129,42 @@
                         </div>
                     </div>
                     <div class="sidebar-content">
-                        <div><div>
+                        <!--<div><div>-->
                         <div class="sidebarcart-caption">
                             <a class="" href="">购物车</a>
                             <span class="glyphicon glyphicon-menu-right"></span>
                         </div>
-                        <div class="sidebarcart">
+                        <div class="sidebarcart"  ng-if="!isEmpty">
                             <dl>
                                 <dt>
                                     <span >购物车</span>
-                                    <a href="JavaScript:" class="sidebarcart-clear">[清空]</a>
+                                    <a href="JavaScript:" class="sidebarcart-clear" ng-click="removeItems()">[清空]</a>
                                 </dt>
                                 <dd>
                                     <ul>
-                                        <li class="clearfix">
-                                            <div class="sidebarcart-name" title="(抢)牛排套餐饭">(抢)牛排套餐饭</div>
+                                        <li class="clearfix" ng-repeat="food in cartItem">
+                                            <div class="sidebarcart-name" ng-bind="food.food_name"></div>
                                             <div class="sidebarcart-quantity">
-                                                <span>-</span>
-                                                <input class="ng-pristine ng-valid" value="1">
-                                                <span>+</span></div>
-                                            <div class="sidebarcart-price">24</div>
+                                                <span ng-click="sub(food.food_id)">-</span>
+                                                <input class="ng-pristine ng-valid" ng-model="food.quantity">
+                                                <span ng-click="add(food.food_id)">+</span></div>
+                                            <div class="sidebarcart-price" ng-bind="food.food_price"></div>
                                         </li>
                                     </ul>
                                 </dd>
                             </dl>
                         </div>
-                                <div class="sidebarcart-summary">
-                                    <p>共 <span class="color-stress">2</span> 份，总计 <span class="color-stress">24</span></p>
-                                    <!--<button class="sidebarcart-submit sidebarcart-hasagio">商家已歇业</button>-->
-                                    <button class="sidebarcart-submit">去结算</button>
-                                </div>
-                            </div>
+                        <div class="sidebarcart-summary" ng-if="!isEmpty">
+                            <p>共 <span class="color-stress" ng-bind="totalItems"></span> 份，总计 <span class="color-stress" ng-bind="totalPrice"></span></p>
+                            <!--<button class="sidebarcart-submit sidebarcart-hasagio">商家已歇业</button>-->
+                            <button class="sidebarcart-submit">去结算</button>
                         </div>
+                        <div class="sidebarcart-notice" ng-if="isEmpty">
+                            <i class="glyphicon glyphicon-cutlery"></i>
+                            <h3>购物车空空如也</h3><p>快去订餐吧，总有你心仪的美食</p>
+                        </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
 
@@ -188,9 +192,10 @@
     </div>
     <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/home.js"></script>
     <script type="text/javascript" src="./js/service/cartService.js"></script>
-    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+
 </body>
 </html>
