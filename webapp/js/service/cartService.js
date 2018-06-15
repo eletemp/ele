@@ -1,7 +1,7 @@
 (function (angular) {
     var app=angular.module("ele.service.cart",[]);
-    app.service("cart",function () {
-        //里面有很多item
+
+    app.service("cart",["$http",function ($http) {
         var cartItem={};
         //初始化数据
         $.ajax({
@@ -52,5 +52,5 @@
             }
             return;
         }
-    });
+    }]);
 })(angular);

@@ -145,6 +145,11 @@ body {
               text-decoration: none; }
               body .indent_central .central_center .center_right .center_content .pro a:nth-of-type(1) {
                 margin-right: 6px; }
+          body .indent_central .central_center .center_right .center_content .indents {
+            width: 970px;
+            height: 100px;
+            border: 1px solid gainsboro;
+            margin-top: 40px; }
   body .indent_down {
     width: 100%;
     height: 302px;
@@ -260,11 +265,14 @@ body {
           width: 86px;
           height: 30px; }
   body .add_address {
-    width: 790px;
-    height: 475px;
-    margin: 225px auto;
+    width: 788px;
+    height: 473px;
     background-color: white;
-    position: relative; }
+    position: absolute;
+    top: 125px;
+    left: 610px;
+    display: none;
+    border: 1px solid grey; }
     body .add_address .add_close {
       display: inline-block;
       position: absolute;

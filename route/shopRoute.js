@@ -21,14 +21,22 @@ module.exports=function(app){
     app.post("/getCart",function (req,res) {
         res.writeHead(200);
         res.end(JSON.stringify(cartItem));
+<<<<<<< HEAD
     });
+=======
+    })
+>>>>>>> 45ce1c6e1653f65e39981dd018072d42021301c5
     app.post("/storeCart",function (req,res) {
         let form=new formidable.IncomingForm();
         form.parse(req,function(err,fields,files){
             cartItem=req.body.params;
             res.writeHead(200);
             res.end(JSON.stringify({msg:"OK"}));
+<<<<<<< HEAD
             console.log("保存数据成功！");
+=======
+>>>>>>> 45ce1c6e1653f65e39981dd018072d42021301c5
         });
     })
+
 }

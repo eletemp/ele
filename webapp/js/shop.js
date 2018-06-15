@@ -10,8 +10,9 @@
             }
             return items;
         }
-    })
-    app.controller("shopCtrl",["$scope","$http","$location","cart",function ($scope,$http,$location,cart) {
+    });
+    app.controller("shopCtrl",["$scope","$http","cart",function ($scope,$http,cart) {
+        // $scope.cartItem={};
         var flag=false;
         if(!flag){
             $scope.cartItem=cart.getCartItem();
@@ -29,6 +30,7 @@
                 });
             },true);
         }
+
         $scope.addItem=cart.addItem;
         $scope.add=function (shopid,$event) {
             cart.add(shopid);
@@ -92,17 +94,6 @@ $(function(){
     //    var e = event || window.event;
     //    console.log(e.clientX+"  "+ e.clientY);
     //    //1609  912
-//})
+
+    //})
 });
-// function GetRequest() {
-//     var url = location.search; //获取url中"?"符后的字串
-//     var theRequest = new Object();
-//     if (url.indexOf("?") != -1) {
-//         var str = url.substr(1);
-//         strs = str.split("&");
-//         for(var i = 0; i < strs.length; i ++) {
-//             theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-//         }
-//     }
-//     return theRequest;
-// }
