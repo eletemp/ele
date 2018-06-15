@@ -1,18 +1,34 @@
 $(function () {
-    $("#btn_login").on("click",function () {
+    $(".log_msg").show(500);
+    setTimeout(function(){
+        $(".log_msg").hide(500);
+    },1500);
+    /*$(".log_msg").on("change",function () {
+        if($(".log_msg").innerText!=""){
+            $(".log_msg").show(500);
+            setTimeout(function(){
+                $(".log_msg").hide(500);
+            },1500);
+        }
+    })*/
+    /*$("#btn_login").on("click",function () {
         //序列化表格内内容为字符串，用于ajax请求
         var userinfo=$("#log_form").serialize();
         //转成json格式的字符串
         var userstr=paramToJson(userinfo);
         //转json
         var json=strToJson(userstr);
+        console.log("LOGIN ajax");
         $.ajax({
-            type:"post",
             url:"/login",
-            async:false,
             data:json,
+            type:"post",
+            async:false,
+            dataType:"json",
             success:function(data){
                 var json=strToJson(data);
+                console.log("成功啦 "+data);
+                console.log(json.status);
                 if(json.status=="success"){
                     window.location.href="./home.html";
                 }else{
@@ -25,7 +41,31 @@ $(function () {
             },
             error:function(){}
         });
-    });
+    });*/
+    /*$("#btn_regist").on("click",function () {
+        var userinfo=strToJson(paramToJson($("#reg_form").serialize()));
+        $.ajax({
+            type:"POST",
+            url:"/register",
+            async:true,
+            data:userinfo,
+            // dataType:json,
+            success:function(data){
+                var json=strToJson(data);
+                console.log("注册成功 "+json);
+                $(".log_msg").text(json.regMsg).show(500);
+                setTimeout(function(){
+                    $(".log_msg").hide(500);
+                },1500);
+                setTimeout(function(){
+                    window.location.href="./home.html";
+                },2000);
+            },
+            error:function(){
+                console.log("error");
+            }
+        });
+    })*/
     $("#log_a").on("click",function () {
         $("#log_a").addClass("active");
         $("#reg_a").removeClass("active");
@@ -34,6 +74,14 @@ $(function () {
             $("#log_form").show(500);
         },500);
     });
+    var flag=false;
+    $("#reg_form").on("change",function () {
+        var count=0;
+        console.log($("i.glyphicon-ok").length);
+        if($("i.glyphicon-ok").length=$("#reg_form input").length-1){
+            $("btn_regist").removeAttr("disabled");
+        }
+    })
     $("#reg_a").on("click",function () {
         $("#reg_a").addClass("active");
         $("#log_a").removeClass("active");
@@ -65,12 +113,14 @@ $(function () {
                     regexp:{//正则式验证
                         regexp : /^[0-9a-zA-Z_]+$/,
                         message : '用户名只能为字母、数字、下划线'
+                        // regexp:/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+                        // message : '邮箱格式不正确'
                     },
-                    remote:{
+                    /*remote:{
                         type: 'POST',
                         url: '/checkUsername',
                         message:'该用户名已被占用'
-                    }
+                    }*/
                 }
             },
             regpwd:{
@@ -103,25 +153,5 @@ $(function () {
             }
         }
     })
-    $("#btn_regist").on("click",function () {
-        console.log($("#reg_form").data("bootstrapValidator").isValid());
-        var userinfo=strToJson(paramToJson($("#reg_form").serialize()));
-        $.ajax({
-            type:"post",
-            url:"/register",
-            async:false,
-            data:userinfo,
-            success:function(data){
-                var json=strToJson(data);
-                $(".log_msg").text(json.regMsg).show(500);
-                setTimeout(function(){
-                    $(".log_msg").hide(500);
-                },1500);
-                setTimeout(function(){
-                    window.location.href="./home.html";
-                },2000);
-            },
-            error:function(){}
-        });
-    })
+
 });

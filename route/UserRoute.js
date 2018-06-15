@@ -4,12 +4,17 @@ const formidable=require("formidable"),
     userCtrl=require("../control/UserCtrl");
 
 module.exports=function(app) {
-    app.use(bodyParser.json());
-    app.post("/login",function (req,res) {
+    app.use(bodyParser.json()); // for parsing application/json
+    app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+    app.use("/login",function (req,res) {
         let form=new formidable.IncomingForm();
         form.parse(req,function (err,fields,files) {
+            console.log("fields "+JSON.stringify(fields));
             userCtrl.login(fields,res);
         });
+    });
+    app.use("/loginui",function (req,res) {
+        res.render("login.ejs",{status:"欢迎"})
     });
     app.post("/checkUsername",function (req,res) {
         let form=new formidable.IncomingForm();
@@ -17,9 +22,11 @@ module.exports=function(app) {
             userCtrl.checkUsername(fields,res);
         });
     });
-    app.post("/register",function (req,res) {
+    app.use("/register",function (req,res) {
+        console.log("register");
         let form=new formidable.IncomingForm();
         form.parse(req,function (err,fields,files) {
+            console.log("fields "+JSON.stringify(fields));
             userCtrl.register(fields,res);
         });
     });

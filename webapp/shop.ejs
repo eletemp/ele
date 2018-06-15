@@ -120,11 +120,11 @@
                         <span class="col-4">
                         <!--<div food="food">-->
                         <div>
-                            <button class="shop-cartbutton" id="add_food" ng-if="cartItem['<%=arr[i].food_id%>']==undefined" ng-click="addItem('<%=arr[i].food_id%>','<%=arr[i].food_name%>','<%=arr[i].food_price%>')">加入购物车</button>
+                            <button class="shop-cartbutton" id="add_food" ng-if="cartItem['<%=arr[i].food_id%>']==undefined" ng-click="addItemAnimate('<%=arr[i].food_id%>','<%=arr[i].food_name%>','<%=arr[i].food_price%>',$event)">加入购物车</button>
                             <div class="shop-cartctrl ng-scope" ng-if="cartItem['<%=arr[i].food_id%>']">
                                 <button class="ctrl minus" ng-click="sub('<%=arr[i].food_id%>')">-</button>
                                 <input class="ctrl quantity ng-pristine ng-valid" min="1" ng-module="{{cartItem['<%=arr[i].food_id%>'].quantity}}" value="{{cartItem['<%=arr[i].food_id%>'].quantity}}">
-                                <button class="ctrl plus" ng-click="add('<%=arr[i].food_id%>')">+</button>
+                                <button class="ctrl plus" ng-click="addAnimate('<%=arr[i].food_id%>',$event)">+</button>
                             </div>
                         </div>
                             <!--</div>-->

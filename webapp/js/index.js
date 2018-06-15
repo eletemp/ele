@@ -212,6 +212,7 @@ $(function(){
                     height:442+"px",
                     top:160+"px"
                 },500);
+                $(".index_head").css("display","none");
                 setTimeout(function(){
                     searchByStationName();
                 },500);

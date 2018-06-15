@@ -1,13 +1,23 @@
 "use strict";
 const userDao=require("../dao/UserDao");
-function login(fields,res) {
-    userDao.selectUser(fields.username,fields.password,function (results) {
-        res.writeHead(200);
-        if(results.length!=0){
-            res.end(JSON.stringify({status:"success"}));
+function login(body,res) {
+    userDao.selectUser(body.username,body.password,function (results) {
+        console.log(JSON.stringify(body));
+        console.log("userCtrl");
+        var json={};
+        console.log(results.length);
+        if(results.length>0){
+            json={status:"success"};
+            // res.render("home.ejs",json);
+            res.redirect('/home')
         }else{
-            res.end(JSON.stringify({status:"failed"}));
+            json={status:"用户名或密码错误"};
+            res.render("login.ejs",json);
         }
+        console.log("login "+  JSON.stringify(json));
+        /*res.writeHead(200);
+        res.end(JSON.stringify(json));*/
+
     })
 }
 function checkUsername(fields,res) {
@@ -23,12 +33,14 @@ function checkUsername(fields,res) {
 }
 function register(fields,res) {
     userDao.insertUser(fields.regname,fields.regpwd,function (results) {
-        console.log("results "+JSON.stringify(results));
-        res.writeHead(200);
+        console.log("fields "+JSON.stringify(fields));
+        // res.writeHead(200);
         if(results.affectedRows==1){
-            res.end("{regMsg:'注册成功'}");
+            // res.end("{regMsg:'注册成功'}");
+            res.render("login.ejs",{status:"注册成功"});
         }else{
-            res.end("{regMsg:'注册失败'}");
+            // res.end("{regMsg:'注册失败'}");
+            res.render("login.ejs",{status:"注册失败"});
         }
 
     });
