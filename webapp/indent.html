@@ -34,7 +34,7 @@
                     <h2>我的资料</h2>
                     <ul>
                         <li><a href="javaScript:void(0)">个人资料</a></li>
-                        <li><a href="javaScript:void(0)">地址管理</a></li>
+                        <li><a href="javaScript:void(0)" id="address_manage">地址管理</a></li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +79,6 @@
                 </div>
                 <div>
                     <span>关注我们 : </span>
-                    <!--<a href="javascript:void(0)">10105757</a>-->
                 </div>
             </div>
             <div class="down_5">
@@ -105,42 +104,44 @@
             </div>
         </div>
     </div>
-    <!--<div class="add_address">-->
-        <!--<div class="add_close"></div>-->
-        <!--<div class="address_top">-->
-            <!--添加新地址-->
-        <!--</div>-->
-        <!--<div class="add_info">-->
-            <!--<form action="">-->
-                <!--<div>-->
-                    <!--<label>姓名</label>-->
-                    <!--<input type="text" placeholder="请输入您的姓名">-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>性别</label>-->
-                    <!--<div>-->
-                        <!--<input type="radio" name="sex" value="1">-->
-                        <!--<label>先生</label>-->
-                        <!--<input type="radio" name="sex" value="2"><label>女士</label>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>位置</label>-->
-                    <!--<img src="" alt="">-->
-                    <!--<input type="text" placeholder="请输入小区、大厦或学校">-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>详细地址</label>-->
-                    <!--<input type="text" placeholder="单元、门牌号">-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<label>手机号</label>-->
-                    <!--<input type="text" placeholder="请输入您的手机号">-->
-                <!--</div>-->
-            <!--</form>-->
-            <!--<button>保存</button>-->
-            <!--<button>取消</button>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="add_address">
+        <div class="add_close"></div>
+        <div class="address_top">
+            添加新地址
+        </div>
+        <div class="add_info">
+            <form action="">
+                <div>
+                    <label>姓名</label>
+                    <input type="text" placeholder="请输入您的姓名">
+                </div>
+                <div>
+                    <label>性别</label>
+                    <div>
+                        <input type="radio" name="sex" value="1">
+                        <label>先生</label>
+                        <input type="radio" name="sex" value="2"><label>女士</label>
+                    </div>
+                </div>
+                <div>
+                    <label>位置</label>
+                    <img src="" alt="">
+                    <input type="text" placeholder="请输入小区、大厦或学校">
+                </div>
+                <div>
+                    <label>详细地址</label>
+                    <input type="text" placeholder="单元、门牌号">
+                </div>
+                <div>
+                    <label>手机号</label>
+                    <input type="text" placeholder="请输入您的手机号">
+                </div>
+            </form>
+            <button id="save">保存</button>
+            <button id="cancel">取消</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/indent.js"></script>
 </body>
 </html>

@@ -116,6 +116,18 @@ body {
     border: 1px solid #eee;
     height: 102px;
     position: relative; }
+    body .shopmenu-main .shopmenu-food .point{
+      width: 0px;
+      height: 0px;
+      display: none;
+      border: 13px solid #0089dc;
+      /*border: 13px solid red;*/
+      border-radius: 20px;
+      position: absolute;
+      /*left: 327.5px;*/
+      /*top: 64px;*/
+      z-index: 100;
+    }
     body .shopmenu-main .shopmenu-food > span:nth-of-type(1) {
       display: inline-block;
       float: left;
@@ -305,6 +317,11 @@ body {
         font-weight: 700;
         color: #fff;
         cursor: pointer; }
+      body .shop-cart .shop-cartfooter .total-price{
+        font-size: 26px;
+        color: #FFF;
+        font-weight: 700;
+      }
       body .shop-cart .shop-cartfooter .shop-carticon {
         position: relative;
         width: 40px;

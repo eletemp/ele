@@ -479,5 +479,18 @@ body {
           margin-top: 5px;
           width: 86px;
           height: 30px; }
+body .order-form .form-group {
+  margin-bottom: 40px;
+}
 
+body .order-form .form-group .form-control{
+  height: 45px;
+}
+.body .modal .modal-header .modal-title{
+  font-weight: 700;
+}
+
+body .order-form .form-group .control-label{
+  color:#666;
+}
 /*# sourceMappingURL=pay.css.map */

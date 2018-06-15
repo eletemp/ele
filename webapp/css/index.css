@@ -318,11 +318,18 @@ body {
       margin-left: 520px;
       width: 86px;
       height: 30px; }
+  body .map_center{
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
   body #map {
     width: 1180px;
     position: absolute;
-    left: 340px;
+    left: 0px;
     top: 700px;
     z-index: 98; }
+
 
 /*# sourceMappingURL=index.css.map */
