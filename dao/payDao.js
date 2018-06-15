@@ -15,18 +15,27 @@ function addAddress(fields,callback){
         if(sex=='2'){
             sex='女';
         }
-        if(sex.equal('1')){
+        if(sex=='1'){
             sex='男';
         }
         let location=fields.location;
         let detail_address=fields.detail_address;
         let phone=fields.phone;
         console.log("name="+name);
-        let sql="insert into orderitem(name,sex,location,detail_address,phone)\n" +
-            "VALUES(?,?,?,?,?)";
-        con.query(sql,[name,sex,location,detail_address,phone],function(err,results,fields){
+        let sql="insert into orderitem(name,sex,location,detail_address,phone,user_id)\n" +
+            "VALUES(?,?,?,?,?,?)";
+        con.query(sql,[name,sex,location,detail_address,phone,1],function(err,results,fields){
             if(err) throw err;
             callback(results);
     });
 }
-module.exports={queryDeliverCost,addAddress};
+function queryAddress(fields,callback){
+    let con=jdbcUtil.getConnection();
+    let user_id=fields;
+    var str="select name,detail_address,phone from orderitem where user_id="+user_id;
+    con.query(str,function (err,results,fields) {
+        if(err) throw err;
+        callback(results);
+    });
+}
+module.exports={queryDeliverCost,addAddress,queryAddress};

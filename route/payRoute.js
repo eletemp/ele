@@ -12,7 +12,6 @@ module.exports=function(app){
     app.post("/address",function(req,res){
         let form=new formidable.IncomingForm();
         form.parse(req,function(err,fields,files){
-            console.log(fields);
             payCtrl.addAddress(fields,res);
         });
     });
