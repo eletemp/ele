@@ -10,6 +10,8 @@ body {
     font-weight: 400; }
   body .font_16 {
     font-size: 16px; }
+  body .black {
+    color: #333; }
   body .shopguide {
     width: 100%;
     height: 190px;
@@ -23,10 +25,10 @@ body {
         color: white; }
       body .shopguide nav.navbar ul li {
         color: white; }
-        body .shopguide nav.navbar ul li a {
+        body .shopguide nav.navbar ul li > a {
           color: inherit !important; }
-        body .shopguide nav.navbar ul li:hover {
-          background-color: rgba(0, 0, 0, 0.1); }
+          body .shopguide nav.navbar ul li > a:hover {
+            background-color: rgba(0, 0, 0, 0.1); }
     body .shopguide .guide-info {
       color: white; }
       body .shopguide .guide-info > img {
@@ -121,6 +123,16 @@ body {
       margin-right: 14px;
       width: 100px;
       height: 100px; }
+    body .shopmenu-main .shopmenu-food .point {
+      width: 0;
+      height: 0;
+      display: none;
+      border: 13px solid #0089dc;
+      border-radius: 20px;
+      position: absolute;
+      left: 327.5px;
+      top: 64px;
+      z-index: 100; }
     body .shopmenu-main .shopmenu-food .shopmenu-food-main .shopmenu-food-name {
       margin-top: 3px;
       font-size: 14px;

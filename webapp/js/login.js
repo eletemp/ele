@@ -2,7 +2,7 @@ $(function () {
     $(".log_msg").show(500);
     setTimeout(function(){
         $(".log_msg").hide(500);
-    },1500);
+    },700);
     /*$(".log_msg").on("change",function () {
         if($(".log_msg").innerText!=""){
             $(".log_msg").show(500);

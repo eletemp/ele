@@ -1,16 +1,30 @@
 "use strict";
 const formidable=require("formidable"),
     bodyParser=require("body-parser"),
-    userCtrl=require("../control/UserCtrl");
+    userCtrl=require("../control/UserCtrl"),
+    cookieParser = require('cookie-parser'),
+    session = require('express-session');
 
 module.exports=function(app) {
+    app.use(cookieParser());
+    app.use(session({
+        secret: '12345',
+        name: 'name',
+        cookie: {maxAge: 600000},
+        resave: false,
+        saveUninitialized: true,
+    }));
+    // let user={}
     app.use(bodyParser.json()); // for parsing application/json
     app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
     app.use("/login",function (req,res) {
         let form=new formidable.IncomingForm();
         form.parse(req,function (err,fields,files) {
-            console.log("fields "+JSON.stringify(fields));
-            userCtrl.login(fields,res);
+            userCtrl.login(fields,res,function (user) {
+                if(user!=undefined){
+                    req.session.user = {id:user.id,username:user.username};
+                }
+            });
         });
     });
     app.use("/loginui",function (req,res) {

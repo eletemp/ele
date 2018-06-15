@@ -24,16 +24,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse font_16" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/">首页 <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">我的订单</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">3****a <span class="caret"></span></a>
+                    <li class="dropdown" ng-if="'<%=user%>'!=''">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=user%> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span>我的地址</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>退出登录</a></li>
+                            <li><a href="#" class="black"><span class="glyphicon glyphicon-map-marker black"></span><span class="black">个人中心</span></a></li>
+                            <li><a href="#" class="black"><span class="glyphicon glyphicon-log-out black"></span><span class="black">退出登录</span></a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="/loginui" role="button" aria-haspopup="true" aria-expanded="false" ng-if="'<%=user%>'==''">登录</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -93,12 +96,12 @@
                 <%for(var i=0;i<arr.length;i++){%>
                 <div class="col-md-6">
                     <div class="shopmenu-food" shop-menu-item="" food="food" shop="shopCache">
-                    <div class="point"></div>
-                    <span class="col-1">
-                        <a href="javascript:">
-                            <img src="<%=arr[i].food_img%>" alt="<%=arr[i].food_name%>的图片">
-                        </a>
-                    </span>
+                        <div class="point"></div>
+                        <span class="col-1">
+                            <a href="javascript:">
+                                <img src="<%=arr[i].food_img%>" alt="<%=arr[i].food_name%>的图片">
+                            </a>
+                        </span>
                         <div class="col-2 shopmenu-food-main">
                             <h3 class="shopmenu-food-name ui-ellipsis ng-binding"><%=arr[i].food_name%></h3>
                             <p class="color-mute ui-ellipsis" tooltip="✨牛排+鸡排+配菜+鸡蛋，美味又营养，肉肉在向你招手~多重口味等你挑，每份都送饮料哦~">
@@ -145,9 +148,8 @@
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                 </a>
                 <div class="shop-grouphead-row">购物车
-                    <a href="javascript:">[清空]</a>
+                    <a href="javascript:void(0)" ng-click="removeItems()">[清空]</a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -156,20 +158,26 @@
             <div class="cell itemname" ng-bind="food.food_name"></div>
             <div class="cell itemquantity">
                 <button ng-click="sub(food.food_id)">-</button>
-                <input class="ng-pristine ng-valid" ng-model="food.quantity"/>
-                <button ng-click="add(food.food_id)">+</button></div>
-            <div class="cell itemtotal ng-binding">￥<span ng-bind="food.food_price"></span></div>
+                <input class="ng-pristine ng-valid" ng-model="food.quantity" ng-value="food.quantity"/>
+                <button ng-click="add(food.food_id)">+</button>
+            </div>
+            <div class="cell itemtotal ng-binding"><span ng-bind="food.food_price | currency:'￥'"></span></div>
         </li>
     </ul>
     <!--<div class="shop-cartbasket-empty">
         <div class="icon-cart"></div>
         <p>购物车是空的，赶紧选购吧</p>
     </div>-->
-    <div class="shop-cartfooter">
-        <span class="glyphicon glyphicon-shopping-cart icon-cart shop-carticon" id="car_logo"></span>
-        <div class="shop-cartfooter-text extras">配送费¥0</div>
-        <button class="shop-cartfooter-checkout disabled" disabled="disabled">购物车是空的</button></div>
+        <div class="shop-cartfooter">
+            <span class="glyphicon glyphicon-shopping-cart icon-cart shop-carticon" id="car_logo"></span>
+            <span class="total-price" ng-bind="totalPrice() |currency:'￥'"></span>
+            <div class="shop-cartfooter-text extras">配送费¥0</div>
+            <button class="shop-cartfooter-checkout disabled" disabled="disabled" ng-if="totalPrice()==0">购物车是空的</button>
+            <button class="shop-cartfooter-checkout" ng-if="totalPrice()>0" id="checkout">去结算</button>
+        </div>
+    <!--</div>-->
 </div>
+
 <div class="footer">
     <div class="footer-copyright serif">
         <h5 class="owner">所有方：上海拉扎斯信息科技有限公司</h5>
@@ -192,6 +200,6 @@
 <script src="./bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript" src="./js/shop.js"></script>
-<script type="text/javascript" src="js/service/cartService.js"></script>
+<script type="text/javascript" src="./js/service/cartService.js"></script>
 </body>
 </html>

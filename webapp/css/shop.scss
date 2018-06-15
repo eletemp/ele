@@ -13,7 +13,9 @@ body{
   .font_16{
     font-size: 16px;
   }
-
+  .black{
+    color: #333;
+  }
   .shopguide{
     nav.navbar{
       z-index: 1;
@@ -24,12 +26,13 @@ body{
       ul{
         li{
           color: white;
-          a{
+          >a{
             color: inherit !important;
+            &:hover{
+              background-color: rgba(0,0,0,.1);
+            }
           }
-          &:hover{
-            background-color: rgba(0,0,0,.1);
-          }
+
         }
       }
     }
@@ -156,6 +159,18 @@ body{
         margin-right: 14px;
         width: 100px;
         height: 100px;
+      }
+      .point{
+        width: 0;
+        height: 0;
+        display: none;
+        border: 13px solid #0089dc;
+        //border: 13px solid red;
+        border-radius: 20px;
+        position: absolute;
+        left: 327.5px;
+        top: 64px;
+        z-index: 100;
       }
       .shopmenu-food-main{
         .shopmenu-food-name {

@@ -1,20 +1,17 @@
 "use strict";
 const userDao=require("../dao/UserDao");
-function login(body,res) {
+function login(body,res,callback) {
     userDao.selectUser(body.username,body.password,function (results) {
-        console.log(JSON.stringify(body));
-        console.log("userCtrl");
         var json={};
-        console.log(results.length);
         if(results.length>0){
             json={status:"success"};
             // res.render("home.ejs",json);
+            callback(results[0]);
             res.redirect('/home')
         }else{
             json={status:"用户名或密码错误"};
             res.render("login.ejs",json);
         }
-        console.log("login "+  JSON.stringify(json));
         /*res.writeHead(200);
         res.end(JSON.stringify(json));*/
 

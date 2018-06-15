@@ -219,19 +219,43 @@ body {
           margin-bottom: 15px;
           font-size: 16px;
           font-weight: 700; }
+        body .pay_central .central_center .central_right h2>a{
+          float: right;
+          font-size: 14px;
+          font-weight: 400;
+          margin-right: 50px;
+        }
         body .pay_central .central_center .central_right .right_1 {
           width: 715px;
           height: 111px;
           margin-bottom: 40px; }
-          body .pay_central .central_center .central_right .right_1 a {
-            width: 715px;
-            height: 72px;
-            display: block;
-            line-height: 72px;
-            background: #f1f1f1;
-            text-align: center;
-            color: #666;
-            text-decoration: none; }
+        .right_1 .checkout-address-list .checkout-address .checkout-address-icon {
+          display: table-cell;
+          width: 64px;
+          text-align: center;
+          vertical-align: middle;
+          border-right: 1px solid #eee;
+          font-size: 30px;
+          color: #ccc;
+        }
+        .right_1 .checkout-address-list .checkout-address .checkout-address-info{
+          display: table-cell;
+          padding-left: 16px;
+        }
+        .right_1 .checkout-address-list .checkout-address .checkout-address-edit{
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          display: none;
+        }
+        .right_1 .checkout-address-list{
+          width: 670px;
+          list-style: none;
+          display: table;
+          border:1px solid #0089dc;
+          z-index: 1;
+          background:url("../img/index.png") right bottom no-repeat;
+        }
         body .pay_central .central_center .central_right .right_2 {
           width: 715px;
           height: 109px;
@@ -479,6 +503,18 @@ body {
           margin-top: 5px;
           width: 86px;
           height: 30px; }
+<<<<<<< HEAD
+body .order-form .form-group {
+  margin-bottom: 40px;
+}
+
+body .order-form .form-group .form-control{
+  height: 45px;
+}
+.body .modal .modal-header .modal-title{
+  font-weight: 700;
+}
+=======
   body .add_address {
     width: 788px;
     height: 473px;
@@ -571,5 +607,9 @@ body {
           border: none;
           padding: 0 20px;
           color: #9f9f9f; }
+>>>>>>> 45ce1c6e1653f65e39981dd018072d42021301c5
 
+body .order-form .form-group .control-label{
+  color:#666;
+}
 /*# sourceMappingURL=pay.css.map */

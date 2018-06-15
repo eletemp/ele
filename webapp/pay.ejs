@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pay</title>
+    <link rel="stylesheet" href="./css/pay.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="pay_header">
+        <div class="header_center">
+            <span>当前位置：</span>
+            <a href="javascript:void(0)">广场南路南华大学</a><span>  >  </span>
+            <a href="javascript:void(0)">至尊牛排套餐饭(南华店)</a><span>  >  </span>
+            <span>订单信息</span>
+            <span class="info">
+                <span class="username">用户名</span>
+                <img src="./img/indent_angle.jpg" alt="">
+            </span>
+        </div>
+    </div>
+    <div class="pay_central" ng-app="shopApp" ng-controller="shopCtrl">
+        <div class="central_top">
+            <div class="top_center">
+                <a href="javascript:void(0)">
+                    <img src="./img/pay_logo.jpg" alt="">
+                </a>
+                <span>订单信息</span>
+                <div>
+                    <img src="./img/pay_proess.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="central_center">
+            <div class="central_left">
+                <div class="left_1">
+                    <h2>订单详情</h2>
+                    <a href="javascript:void(0)">< 返回店家修改</a>
+                </div>
+                <div class="left_2">
+                    <span>商品</span>
+                    <span>份数</span>
+                    <span>小计（元）</span>
+                </div>
+                <div class="left_3" ng-repeat="food in cartItem">
+                    <div ng-bind="food.food_name"></div>
+                    <div>
+                        <button ng-click="sub(food.food_id)">-</button>
+                        <input type="text" value="{{food.quantity}}">
+                        <button ng-click="add(food.food_id)">+</button>
+                    </div>
+                    <div ng-bind="food.food_price"></div>
+                </div>
+                <ul>
+                    <li>
+                        <span>配送费</span>
+                        <span><%=deliver_cost%></span>
+                    </li>
+                </ul>
+                <div class="left_4">
+                    ￥
+                    <span ng-bind="totalPrice()+<%=deliver_cost%>"></span>
+                </div>
+                <div class="left_5">
+                    共 <span>1</span> 份商品
+                </div>
+            </div>
+            <div class="central_right">
+                <div class="right_1">
+                    <h2>收货地址
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">+ 添加新地址</a>
+                    </h2>
+                    <ul class="checkout-address-list">
+                        <li class="checkout-address">
+                            <i class="glyphicon glyphicon-map-marker checkout-address-icon"></i>
+                            <div class="checkout-address-info">
+                                <p><%=name%>女士 <%=phone%></p>
+                                <p><%=detail_address%></p>
+                            </div>
+                            <div class="checkout-address-edit">
+                                <a href="javascript:" data-toggle="modal" data-target="#myModal">修改</a>
+                                <a href="javascript:" ng-click="removeAddress($event, item)">×</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right_2">
+                    <h2>
+                        付款方式
+                        <span>推荐使用在线支付，不用找零，优惠更多</span>
+                    </h2>
+                    <ul>
+                        <li>
+                            <p>在线支付</p>
+                            <p>支持微信、支付宝、QQ钱包及大部分银行卡</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right_3">
+                    <h2>选择优惠</h2>
+                    <p>
+                        <span>使用红包</span>
+                        <span>无可用红包</span>
+                    </p>
+                    <p>
+                        <span>使用优惠价</span>
+                        <span>
+                            网站不支持
+                            <em>（仅手机客户端可用）</em>
+                        </span>
+
+                    </p>
+                </div>
+                <div class="right_4">
+                    <h2>其他信息</h2>
+                    <div>
+                        <span>配送方式</span>
+                        <span>
+                            本订单由
+                            <a href="javascript:void(0)"> [蜂鸟专送] </a>
+                            提供配送
+                        </span>
+                    </div>
+                    <div>
+                        <span>送达时间</span>
+                        <div>
+                            <span>立即送达</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span>发票信息</span>
+                        <span>
+                            仅在饿了么 APP 中支持开发票哦
+                        </span>
+                    </div>
+                    <div>
+                        <span>订单备注</span>
+                    <span>
+                        <input type="text">
+                    </span>
+                    </div>
+                </div>
+                <div class="right_5">
+                    <button>确定下单</button>
+                    <div class="code">
+                        <p>
+                            扫码下载APP <br>
+                            APP下单立享优惠
+                        </p>
+                        <div class="smallcode">
+                            <img src="./img/pay_codeup.jpg" alt="">
+                        </div>
+                        <div class="bigcode">
+                            <img src="./img/pay_code.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pay_down">
+            <div class="down_center">
+                <div class="down_1">
+                    <h3>用户帮助</h3>
+                    <a href="javascript:void(0)">我的客服</a>
+                </div>
+                <div class="down_2">
+                    <h3>商务合作</h3>
+                    <a href="javascript:void(0)">我要开店</a>
+                    <a href="javascript:void(0)">加盟指南</a>
+                    <a href="javascript:void(0)">市场合作</a>
+                    <a href="javascript:void(0)">开放平台</a>
+                </div>
+                <div class="down_3">
+                    <h3>关于我们</h3>
+                    <a href="javascript:void(0)">饿了么介绍</a>
+                    <a href="javascript:void(0)">加入我们</a>
+                    <a href="javascript:void(0)">联系我们</a>
+                    <a href="javascript:void(0)">规则中心</a>
+                </div>
+                <div class="down_4">
+                    <div>
+                        <span>24小时客服热线 : </span>
+                        <a href="javascript:void(0)">10105757</a>
+                    </div>
+                    <div>
+                        <span>关注我们 : </span>
+                    </div>
+                </div>
+                <div class="down_5">
+                    <a href="javascript:void(0)">
+                        <img src="./img/code.png" alt="">
+                    </a>
+                    <div>
+                        <h3>下载手机版</h3>
+                        <p>扫一扫，手机订餐方便</p>
+                    </div>
+                </div>
+                <div class="down_6">
+                    <h2>所有方：上海拉扎斯信息科技有限公司</h2>
+                    <p>增值电信业务许可证 :
+                        <a href="javascript:void(0)">沪B2-20150033</a><span>|</span>
+                        <a href="javascript:void(0)">沪ICP备 09007032</a><span>|</span>
+                        <a href="javascript:void(0)">上海工商行政管理</a>
+                        Copyright ©2008-2018 ele.me, All Rights Reserved.互联网药品信息服务资格证书 编号：（沪）-经营性-2016-0011
+                    </p>
+                    <a href="javascript:void(0)">
+                        <img src="img/down.jpg" alt="已通过沪公网备案，备案号 310100103568">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--模态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加新地址</h4>
+                </div>
+                <div class="modal-body">
+                    <form enctype="multipart/form-data" class="form-horizontal order-form" id="order-form" action="/address" method="post">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">姓名</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="请输入您的姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" id="sex">性别</label>
+                            <div class="col-md-8">
+                                <input type="radio" id="sex-male" name="sex" value="1" checked>
+                                <label for="sex-male">先生</label>
+                                <input type="radio" id="sex-female" name="sex" value="2">
+                                <label for="sex-female">女士</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="col-sm-2 control-label">地址</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="location" name="location" placeholder="请输入您的地址">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="detail_address" class="col-sm-2 control-label">详细地址</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="detail_address" name="detail_address" placeholder="单元、门牌号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-sm-2 control-label">电话</label>
+                            <div class="col-md-8">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="请输入您的手机号">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-primary">保存</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/shop.js"></script>
+    <script type="text/javascript" src="./js/service/cartService.js"></script>
+    <script type="text/javascript" src="./js/pay.js"></script>
+</body>
+</html>

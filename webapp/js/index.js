@@ -210,7 +210,8 @@ $(function(){
                 },500);
                 $("#map").animate({
                     height:442+"px",
-                    top:160+"px"
+                    top:0,
+                    width:"90%"
                 },500);
                 $(".index_head").css("display","none");
                 setTimeout(function(){

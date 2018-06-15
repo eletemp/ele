@@ -1,9 +1,9 @@
 "use strict";
 const homeDao=require("../dao/homeDao");
-function queryAllShops(req,res){
+function queryAllShops(fields,user,req,res){
     homeDao.queryAllShops(function(results){
     //    将数据渲染到页面
-        renderHome(req,res,results);
+        renderHome(fields,user,req,res,results);
     });
 }
 //搜索商家或美食
@@ -13,7 +13,8 @@ function globalsearch(req,res,keyword){
     });
 }
 
-function renderHome(req,res,results){
+function renderHome(fields,user,req,res,results){
+
     var array=[];
     for(var i=0;i<results.length;i++){
         array.push({
@@ -25,7 +26,9 @@ function renderHome(req,res,results){
         });
     }
     let shops={
-        arr:array
+        arr:array,
+        address:fields.address,
+        user:user
     };
     res.render("home.ejs",shops);
 }

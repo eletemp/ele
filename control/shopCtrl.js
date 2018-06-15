@@ -1,9 +1,9 @@
 "use strict";
 const shopDao=require("../dao/shopDao");
-function queryAllfoods(req,res,shopid){
+function queryAllfoods(req,res,shopid,user){
     shopDao.queryAllfoods(shopid,function (results) {
     //    将数据渲染到页面
-        renderShop(req,res,results);
+        renderShop(req,res,results,user);
     });
 }
 function searchFood(req,res,keyword){
@@ -11,7 +11,7 @@ function searchFood(req,res,keyword){
         renderShop(req,res,results);
     });
 }
-function renderShop(req,res,results){
+function renderShop(req,res,results,user){
     var array=[];
     for(var i=0;i<results.length;i++){
         array.push({
@@ -23,7 +23,8 @@ function renderShop(req,res,results){
         });
     }
     let shops={
-        arr:array
+        arr:array,
+        user:user
     };
     res.render("shop.ejs",shops);
 }

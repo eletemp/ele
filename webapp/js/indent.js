@@ -5,7 +5,7 @@ $(function(){
     });
     $("#add_close").on("click",function(){
         $("body").css("background","#f7f7f7");
-        $("#add_address").hide()
+        $("#add_address").hide();
     });
     $("#save").on("click",function(){
         alert("保存成功！");

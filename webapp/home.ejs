@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="./css/home.css"/>
 </head>
 <body>
-    <div class="home">
+    <div class="home" ng-app="homeApp" >
         <!--头部start-->
         <header>
             <nav class="navbar shopguide">
@@ -31,13 +31,17 @@
                             <li><a href="#" class="topbar-item focus">我的订单</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">4****c <span class="caret"></span></a>
+                            <li class="dropdown" ng-if="'<%=user%>'!=''">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=user%> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span><span>个人中心</span></a></li>
                                     <li><a href="#"><span class="glyphicon glyphicon-log-out"></span><span>退出登录</span></a></li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="/loginui" role="button" aria-haspopup="true" aria-expanded="false" ng-if="'<%=user%>'==''">登录</a>
+                            </li>
+
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -51,8 +55,8 @@
                     <!--位置-->
                     <div class="location">
                         <span>当前位置：</span>
-                        <span>南华大学：</span>
-                        <span><a href="#">[切换地址]</a></span>
+                        <span><%=address%>：</span>
+                        <span><a href="/">[切换地址]</a></span>
                     </div>
                     <!--搜索部分-->
                     <div class="shopnav-search">
@@ -119,7 +123,7 @@
                         <%}%>
                     </div>
                 </div>
-                <div class="sidebar" ng-app="homeApp" ng-controller="cartCtrl">
+                <div class="sidebar" ng-controller="cartCtrl">
                     <div class="slider">
                         <div class="slider-tabs">
                             <a class="cartbtn">
