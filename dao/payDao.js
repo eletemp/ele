@@ -12,6 +12,12 @@ function addAddress(fields,callback){
         let con=jdbcUtil.getConnection();
         let name=fields.name;
         let sex=fields.sex;
+        if(sex=='2'){
+            sex='女';
+        }
+        if(sex.equal('1')){
+            sex='男';
+        }
         let location=fields.location;
         let detail_address=fields.detail_address;
         let phone=fields.phone;
@@ -20,7 +26,6 @@ function addAddress(fields,callback){
             "VALUES(?,?,?,?,?)";
         con.query(sql,[name,sex,location,detail_address,phone],function(err,results,fields){
             if(err) throw err;
-            console.log("results="+results);
             callback(results);
     });
 }

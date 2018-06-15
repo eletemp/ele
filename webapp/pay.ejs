@@ -206,7 +206,7 @@
                     <h4 class="modal-title" id="myModalLabel">添加新地址</h4>
                 </div>
                 <div class="modal-body">
-                    <form enctype="multipart/form-data" class="form-horizontal order-form" id="order-form" action="/address">
+                    <form enctype="multipart/form-data" class="form-horizontal order-form" id="order-form" action="/address" method="post">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">姓名</label>
                             <div class="col-md-8">
@@ -242,7 +242,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button type="submit" class="btn btn-primary" id="saveAdd">保存</button>
+                            <button type="submit" class="btn btn-primary">保存</button>
                         </div>
                     </form>
                 </div>

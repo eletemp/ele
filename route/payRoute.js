@@ -10,12 +10,9 @@ module.exports=function(app){
         payCtrl.queryDeliverCost(req,res,shopid);
     });
     app.post("/address",function(req,res){
-        console.log("111");
         let form=new formidable.IncomingForm();
-        console.log("3333");
         form.parse(req,function(err,fields,files){
-            console.log("222");
-            console.log("fields="+fields);
+            console.log(fields);
             payCtrl.addAddress(fields,res);
         });
     });

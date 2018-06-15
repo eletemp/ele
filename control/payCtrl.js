@@ -7,7 +7,11 @@ function queryDeliverCost(req,res,shopid){
 }
 function addAddress(fields,res){
     payDao.addAddress(fields,function(results){
-        console.log(results);
+        if(results!=null){
+            console.log("success");
+        }else{
+            console.log("failed");
+        }
     });
 }
 module.exports={queryDeliverCost,addAddress};
