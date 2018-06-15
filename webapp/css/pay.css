@@ -246,7 +246,7 @@ body {
           position: absolute;
           right: 10px;
           top: 10px;
-          display: none;
+          /*display: none;*/
         }
         .right_1 .checkout-address-list{
           width: 670px;
@@ -255,6 +255,7 @@ body {
           border:1px solid #0089dc;
           z-index: 1;
           background:url("../img/index.png") right bottom no-repeat;
+          position: relative;
         }
         body .pay_central .central_center .central_right .right_2 {
           width: 715px;

@@ -54,12 +54,12 @@
                 <ul>
                     <li>
                         <span>配送费</span>
-                        <span><%=deliver_cost%></span>
+                        <span><%=deliver.deliver_cost%></span>
                     </li>
                 </ul>
                 <div class="left_4">
                     ￥
-                    <span ng-bind="totalPrice()+<%=deliver_cost%>"></span>
+                    <span ng-bind="totalPrice()+<%=deliver.deliver_cost%>"></span>
                 </div>
                 <div class="left_5">
                     共 <span>1</span> 份商品
@@ -74,11 +74,11 @@
                         <li class="checkout-address">
                             <i class="glyphicon glyphicon-map-marker checkout-address-icon"></i>
                             <div class="checkout-address-info">
-                                <p><%=name%>女士 <%=phone%></p>
-                                <p><%=detail_address%></p>
+                                <p><%=address.name%> &nbsp;&nbsp;女士 <%=address.phone%></p>
+                                <p><%=address.detail_address%></p>
                             </div>
                             <div class="checkout-address-edit">
-                                <a href="javascript:" data-toggle="modal" data-target="#myModal">修改</a>
+                                <a href="javascript:" data-toggle="modal" data-target="#myModal1">修改</a>
                                 <a href="javascript:" ng-click="removeAddress($event, item)">×</a>
                             </div>
                         </li>
@@ -211,7 +211,7 @@
         </div>
     </div>
 
-    <!--模态框-->
+    <!--添加地址-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -220,7 +220,7 @@
                     <h4 class="modal-title" id="myModalLabel">添加新地址</h4>
                 </div>
                 <div class="modal-body">
-                    <form enctype="multipart/form-data" class="form-horizontal order-form" id="order-form" action="/address" method="post">
+                    <form enctype="multipart/form-data" class="form-horizontal order-form" id="order-form" action="/addAddress" method="post">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">姓名</label>
                             <div class="col-md-8">
@@ -230,7 +230,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label" id="sex">性别</label>
                             <div class="col-md-8">
-                                <input type="radio" id="sex-male" name="sex" value="1" checked>
+                                <input type="radio" id="sex-male" name="sex" value="1">
                                 <label for="sex-male">先生</label>
                                 <input type="radio" id="sex-female" name="sex" value="2">
                                 <label for="sex-female">女士</label>
@@ -252,6 +252,58 @@
                             <label for="phone" class="col-sm-2 control-label">电话</label>
                             <div class="col-md-8">
                                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="请输入您的手机号">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-primary">保存</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--修改-->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">修改地址</h4>
+                </div>
+                <div class="modal-body">
+                    <form enctype="multipart/form-data" class="form-horizontal order-form" id="order-form" action="/updateAddress?id=<%=address.id%>" method="post">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">姓名</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="请输入您的姓名" value="<%=address.name%>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" id="sex">性别</label>
+                            <div class="col-md-8">
+                                <input type="radio" id="sex-male" name="sex" value="1">
+                                <label for="sex-male">先生</label>
+                                <input type="radio" id="sex-female" name="sex" value="2">
+                                <label for="sex-female">女士</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="col-sm-2 control-label">地址</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="location" name="location" placeholder="请输入您的地址" value="<%=address.location%>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="detail_address" class="col-sm-2 control-label">详细地址</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="detail_address" name="detail_address" placeholder="单元、门牌号"  value="<%=address.detail_address%>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-sm-2 control-label">电话</label>
+                            <div class="col-md-8">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="请输入您的手机号" value="<%=address.phone%>">
                             </div>
                         </div>
                         <div class="modal-footer">

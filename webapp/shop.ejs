@@ -120,11 +120,7 @@
                         <span class="col-4">
                         <!--<div food="food">-->
                         <div>
-<<<<<<< HEAD
-                            <button class="shop-cartbutton add_food" ng-if="cartItem['<%=arr[i].food_id%>']==undefined" ng-click="addItem('<%=arr[i].food_id%>','<%=arr[i].food_name%>','<%=arr[i].food_price%>')">加入购物车</button>
-=======
                             <button class="shop-cartbutton" id="add_food" ng-if="cartItem['<%=arr[i].food_id%>']==undefined" ng-click="addItem('<%=arr[i].food_id%>','<%=arr[i].food_name%>','<%=arr[i].food_price%>')">加入购物车</button>
->>>>>>> 45ce1c6e1653f65e39981dd018072d42021301c5
                             <div class="shop-cartctrl ng-scope" ng-if="cartItem['<%=arr[i].food_id%>']">
                                 <button class="ctrl minus" ng-click="sub('<%=arr[i].food_id%>')">-</button>
                                 <input class="ctrl quantity ng-pristine ng-valid" min="1" ng-module="{{cartItem['<%=arr[i].food_id%>'].quantity}}" value="{{cartItem['<%=arr[i].food_id%>'].quantity}}">
@@ -159,23 +155,16 @@
             <div class="cell itemname" ng-bind="food.food_name"></div>
             <div class="cell itemquantity">
                 <button ng-click="sub(food.food_id)">-</button>
-<<<<<<< HEAD
                 <input class="ng-pristine ng-valid" ng-model="food.quantity" ng-value="food.quantity"/>
                 <button ng-click="add(food.food_id)">+</button>
             </div>
             <div class="cell itemtotal ng-binding"><span ng-bind="food.food_price | currency:'￥'"></span></div>
-=======
-                <input class="ng-pristine ng-valid" ng-model="food.quantity"/>
-                <button ng-click="add(food.food_id)">+</button></div>
-            <div class="cell itemtotal ng-binding">￥<span ng-bind="food.food_price"></span></div>
->>>>>>> 45ce1c6e1653f65e39981dd018072d42021301c5
         </li>
     </ul>
     <!--<div class="shop-cartbasket-empty">
         <div class="icon-cart"></div>
         <p>购物车是空的，赶紧选购吧</p>
     </div>-->
-<<<<<<< HEAD
         <div class="shop-cartfooter">
             <span class="glyphicon glyphicon-shopping-cart icon-cart shop-carticon" id="car_logo"></span>
             <span class="total-price" ng-bind="totalPrice() |currency:'￥'"></span>
@@ -183,13 +172,6 @@
             <button class="shop-cartfooter-checkout disabled" disabled="disabled" ng-if="totalPrice()==0">购物车是空的</button>
             <button class="shop-cartfooter-checkout" ng-if="totalPrice()>0" id="checkout">去结算</button>
         </div>
-    <!--</div>-->
-=======
-    <div class="shop-cartfooter">
-        <span class="glyphicon glyphicon-shopping-cart icon-cart shop-carticon" id="car_logo"></span>
-        <div class="shop-cartfooter-text extras">配送费¥0</div>
-        <button class="shop-cartfooter-checkout disabled" disabled="disabled">购物车是空的</button></div>
->>>>>>> 45ce1c6e1653f65e39981dd018072d42021301c5
 </div>
 
 <div class="footer">
