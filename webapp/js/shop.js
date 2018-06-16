@@ -56,6 +56,17 @@
 
     }]);
 })(angular);
+$(function () {
+    //    点击结算按钮，进行页面跳转
+    $("#checkout").on("click",function(){
+        //    页面跳转       获取shopId
+        var idStr=window.location.search||location.search;
+        var id=idStr.slice(1,idStr.length);
+        console.log("id "+id);
+        window.location.href="/pay?"+id;
+    });
+})
+
 function animate(left,top) {
     $(".point").show();
     $(".point").offset({

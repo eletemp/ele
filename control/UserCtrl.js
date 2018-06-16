@@ -7,7 +7,7 @@ function login(body,res,callback) {
             json={status:"success"};
             // res.render("home.ejs",json);
             callback(results[0]);
-            res.redirect('/home')
+            res.redirect('/')
         }else{
             json={status:"用户名或密码错误"};
             res.render("login.ejs",json);

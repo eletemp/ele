@@ -41,5 +41,9 @@ $(".cartbtn").on("click",function () {
     }
     close=!close;
 });
-
+$(function () {
+    $(".sidebarcart-submit").on("click",function () {
+        window.location.href="/pay?id="+1;
+    });
+})
 

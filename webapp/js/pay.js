@@ -19,6 +19,14 @@ $(function(){
     //         error:function(){}
     //     });
     // });
+    $("#order").on("click",function () {
+        console.log("aa");
+
+        var a=confirm("下单成功");
+        if(a==true){
+            window.location.href="/home";
+        }
+    })
 //    表单验证
     $("#order-form").bootstrapValidator({
         message : '该值不合法',

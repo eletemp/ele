@@ -17,7 +17,11 @@ module.exports=function(app){
 
     });
     app.use("/search",function(req,res){
+        var user=req.session.user;
+        if(user==undefined){
+            user={id:"",username:""};
+        }
         let keyword=req.body.keyWord;
-        homeCtrl.globalsearch(req,res,keyword);
+        homeCtrl.globalsearch(req,res,keyword,user.username);
     });
 }

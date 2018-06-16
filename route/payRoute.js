@@ -7,20 +7,22 @@ module.exports=function(app){
     app.use("/pay",function(req,res){
         //查询这家店的配送费
         let shopid=req.query.id;
-        payCtrl.queryDeliverCost(req,res,shopid);
+        console.log("shopid "+shopid);
+        payCtrl.renderPayUI(req,res,shopid,1);
     });
-    app.post("/address",function(req,res){
+    app.use("/addAddress",function(req,res){
+    //    获取地址
         let form=new formidable.IncomingForm();
         form.parse(req,function(err,fields,files){
             payCtrl.addAddress(fields,res);
         });
     });
-    app.use("/address",function(req,res){
-    //    获取地址
+    app.use("/updateAddress",function(req,res){
+        //    获取地址
         let form=new formidable.IncomingForm();
+        let order_id=req.query.id;
         form.parse(req,function(err,fields,files){
-            console.log("fields="+fields);
-            payCtrl.addAddress(fields,res);
+            payCtrl.updateAddress(fields,order_id,res);
         });
     });
 }

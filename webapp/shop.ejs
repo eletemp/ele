@@ -170,12 +170,11 @@
     </div>-->
         <div class="shop-cartfooter">
             <span class="glyphicon glyphicon-shopping-cart icon-cart shop-carticon" id="car_logo"></span>
-            <span class="total-price" ng-bind="totalPrice() |currency:'￥'"></span>
-            <div class="shop-cartfooter-text extras">配送费¥0</div>
+            <span class="total-price" style="color: orangered" ng-bind="totalPrice() |currency:'￥'"></span>
+            <div class="shop-cartfooter-text extras">配送费¥6</div>
             <button class="shop-cartfooter-checkout disabled" disabled="disabled" ng-if="totalPrice()==0">购物车是空的</button>
             <button class="shop-cartfooter-checkout" ng-if="totalPrice()>0" id="checkout">去结算</button>
         </div>
-    <!--</div>-->
 </div>
 
 <div class="footer">

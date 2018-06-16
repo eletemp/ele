@@ -16,10 +16,10 @@ module.exports=function(app){
        let shopid=req.query.id;
         shopCtrl.queryAllfoods(req,res,shopid,user.username);
     });
-    app.get("/shop",function(req,res){
+    /*app.get("/shop",function(req,res){
         let shopid=req.param.id;
         shopCtrl.queryAllfoods(req,res,shopid);
-    });
+    });*/
     app.use("/searchFood",function (req,res) {
         let keyword=req.body.keyWord;
         shopCtrl.searchFood(req,res,keyword);
@@ -36,5 +36,4 @@ module.exports=function(app){
             res.end(JSON.stringify({msg:"OK"}));
         });
     })
-
 }
